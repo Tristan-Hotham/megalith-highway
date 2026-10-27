@@ -1,0 +1,105 @@
+<div class="stats">
+  <div><b>{{data.megaliths|int}}</b><span>megalithic monuments on one map, in {{data.countries}} countries</span></div>
+  <div><b class="h">{{coast.groups.all.ratio_random|f1}}×</b><span>as likely as random land in the same country to stand within 10 km of the sea</span></div>
+  <div><b class="s">{{coast.groups.all.ratio_tumuli|f1}}×</b><span>as likely as ordinary barrows in the same countries, and the uncertainty overlaps</span></div>
+  <div><b>{{show.nwf_p10|yr}} BC</b><span>when tombs begin in north-west France, the earliest of {{show.n_ranked|words}} regions</span></div>
+</div>
+
+<h2><span class="n">01 · The puzzle</span>Same tombs, far apart</h2>
+<p class="lede">Walk into a passage grave in Brittany, then one in the Boyne valley in Ireland, then one on Orkney, in northern Portugal or on a Danish island. The details differ, but the idea is the same: a long, low passage of upright slabs, roofed with stones that took dozens of people to move, leading into a chamber for the dead. Dolmens, gallery graves and standing stones repeat the trick from Andalusia to Sweden.</p>
+<p>Why would farmers a thousand miles apart build the same thing? One old answer is that the idea travelled by boat, along the Atlantic coast. In 2019 Bettina Schulz Paulsson modelled more than 2,400 radiocarbon dates and argued in <i>PNAS</i> that the first megalithic graves appeared in north-west France and that the tradition spread from there, in a few phases, by sea.</p>
+<p>I wanted to see what open data can say about that story. So I gathered every megalithic monument that volunteers have mapped in OpenStreetMap, {{data.megaliths|int}} of them after cleaning, and set them three tests. Do megaliths sit closer to the sea than chance, and closer than other prehistoric burial mounds? Do the oldest radiocarbon dates from megalithic sites sit on the Atlantic coast? And is the Atlantic facade really where the great stone tombs are, type by type?</p>
+<p class="pull">The short answer: the sea-route story survives all three tests, but none of them proves it, and one of them is much weaker than it first looks.</p>
+
+<h2><span class="n">02 · The map</span>Everything megalithic, on one map</h2>
+<p>Every dot is a monument tagged as megalithic in OpenStreetMap: {{data.by_class.dolmen|int}} dolmens, {{data.by_class.menhir|int}} menhirs and standing stones, {{data.by_class.circle|int}} stone circles, {{data.by_class.tower|int}} nuraghi and talaiots (the stone towers of Sardinia and the Balearics, kept as their own class), {{data.by_class.passage|int}} passage graves, {{data.by_class.chamber|int}} chamber tombs and chambered cairns, {{data.by_class.longb|int}} long barrows, {{data.by_class.rows|int}} alignments and stone rows, {{data.by_class.gallery|int}} gallery graves, {{data.by_class.cpw|int}} Irish court, portal and wedge tombs, and {{data.by_class.unk|int}} megaliths whose type nobody has tagged. Filter by type, country or period tag, or switch to the radiocarbon view and press play to watch the dated tombs appear.</p>
+<div class="bleed figure">
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Map view"><button class="btn" data-mode="type" aria-pressed="true">Types</button><button class="btn" data-mode="time" aria-pressed="false">Radiocarbon spread</button></div>
+    <button class="btn" id="all">All types</button><button class="btn" id="tombs">Tombs only</button><button class="btn" id="stones">Standing stones only</button>
+    <select id="country" aria-label="Country"></select>
+    <select id="period" aria-label="Period tag"></select>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="mapgrid">
+    <div>
+      <div id="map" role="region" aria-label="Map of megalithic monuments in Europe"></div>
+      <div class="timebar"><button class="btn" id="play">▶ Play the spread</button><span class="yr" id="yr">500 BC</span><input type="range" id="slider" min="-5500" max="-500" step="10" value="-500" aria-label="Year"><div class="cnt" id="counts"></div></div>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="side">
+      <div style="display:flex;gap:8px"><input type="search" id="q" placeholder="Find a named monument" aria-label="Find a monument"></div>
+      <ul class="results" id="res"></ul>
+      <div class="card empty" id="card"></div>
+      <p class="counts">Coverage is uneven. OpenStreetMap has {{show.france_n|int}} megaliths in France but only {{show.denmark_n|int}} in Denmark, a country famous for its dolmens, where mappers have tagged {{show.denmark_tumuli|int}} burial mounds as plain tumuli instead. Gaps on the map are often gaps in tagging, not in prehistory.</p>
+    </div>
+  </div>
+  <p class="src">Monuments © OpenStreetMap contributors (ODbL), extract of 27 October 2026; outlines are placed at their first vertex. Dated sites: p3k14c, linked by name keyword or by a shared name within 1 km, calibrated with IntCal20.</p>
+</div>
+
+<h2><span class="n">03 · Test one</span>Do megaliths hug the sea?</h2>
+<p>If the idea came by boat, you might expect the monuments to crowd the coast. They do, compared with random ground. Of all {{data.megaliths|int}} monuments, {{coast.groups.all.observed_near|pct0}} stand within 10 km of the sea. Ten random points on land for every monument, in the same countries, put only {{coast.groups.all.random_near|pct0}} that close. That makes megaliths {{coast.groups.all.ratio_random|f1}} times as likely to be near the sea as the land they sit in, and the pattern holds in {{coast.countries_closer_than_random}} of the {{coast.countries_tested}} countries with at least 50 monuments.</p>
+<p>But random land is a soft target. People in prehistory did not live at random, and coasts and river mouths are good places to farm, fish and travel whatever you build for your dead. So I used a second, tougher yardstick: the {{data.tumuli|int}} barrows and tumuli in OpenStreetMap that carry no megalithic tag, reweighted so that each country counts as much as it does among the megaliths. Against those, the edge shrinks: {{coast.groups.all.observed_near|pct0}} of megaliths against {{coast.groups.all.tumuli_near|pct0}} of barrows, a ratio of {{coast.groups.all.ratio_tumuli|f1}}. Because monuments cluster, I resampled 50 km grid cells rather than single sites to get an honest range for the megalith figure, and it runs from {{coast.groups.all.observed_near_ci.0|pct0}} to {{coast.groups.all.observed_near_ci.1|pct0}}, wide enough to include the barrows.</p>
+<div class="figure">
+  <p class="fig-h">How far from the sea?</p>
+  <p class="fig-sub">Share of each group in each distance band. Barrows and random points are reweighted to the megaliths' mix of countries.</p>
+  <div class="chart" id="bands"></div>
+</div>
+<p>The detail matters. Tombs are the least coastal group: {{coast.groups.tombs.observed_near|pct0}} within 10 km, against {{coast.groups.tombs.tumuli_near|pct0}} of barrows. Menhirs, stone rows and stone circles are the most striking: {{coast.groups.standing.observed_near|pct0}} within 10 km, {{coast.groups.standing.ratio_tumuli|f1}} times the barrow figure. The Sardinian and Balearic towers are coastal too, but less so than the tumuli mapped in Italy.</p>
+<div class="figure">
+  <p class="fig-h">Within 10 km of the sea, by group</p>
+  <p class="fig-sub">Dot: monuments, with a 95% interval from resampling 50 km cells. Diamond: barrows and tumuli, same country mix. Square: random land, same countries.</p>
+  <div class="chart" id="groups"></div>
+</div>
+<div class="figure">
+  <p class="fig-h">Country by country</p>
+  <p class="fig-sub">Countries with at least 50 megalithic monuments in OpenStreetMap. Barrow figures only where there are at least 30 barrows.</p>
+  <div class="tablewrap"><table class="t" id="ctab"></table></div>
+  <p class="src">Portugal is the clearest exception: only {{show.portugal_near|pct0}} of its mapped megaliths are within 10 km of the sea, below the {{show.portugal_rand|pct0}} of random land, because the great dolmen fields of the Alentejo and the north lie inland.</p>
+</div>
+
+<h2><span class="n">04 · Test two</span>Where are the oldest dates?</h2>
+<p>Distance to the sea cannot tell us which way an idea moved. Dates can. I took the p3k14c database of archaeological radiocarbon dates, {{c14.dates_box|int}} dates in the map's frame, dropped {{c14.shell_dropped|int}} shell dates, and linked sites to megaliths by two documented rules: the site's name contains a megalithic word (dolmen, anta, mamoa, hunebed, long barrow, nuraghe and so on), or it shares a distinctive name with a mapped megalith within 1 km. That gave {{c14.primary_sites|int}} monuments. A check of {{c14.link_check.n}} links picked at random found {{show.link_ok}} that point at the same monument or the same named group, {{show.link_unclear|words}} that are unclear, usually a village name shared with a tomb nearby, and {{show.link_wrong|words}} that is wrong.</p>
+<p>I calibrated every date with the IntCal20 curve and took each monument's earliest date between 5500 and 500 BC. One early date proves little: it can come from charcoal that was old when the stones went up, or from activity before the monument. So for each region I used a steadier marker, the date by which the earliest tenth of its dated tombs had begun, with a bootstrap interval, and only for regions with at least eight dated tombs.</p>
+<div class="figure">
+  <p class="fig-h">When do the tombs begin?</p>
+  <p class="fig-sub">The 10th percentile of each dated tomb's earliest calibrated date, by region (number of dated tombs in brackets). Lines are 95% bootstrap intervals.</p>
+  <div class="chart" id="regs"></div>
+</div>
+<p>North-west France comes first, at about {{show.nwf_p10|yr}} BC from {{show.nwf_n}} dated tombs, which fits Schulz Paulsson's result. {{show.second_region}} follows at about {{show.second_p10|yr}} BC, then {{show.third_region}}, Portugal at about {{show.por_p10|yr}} BC, the Low Countries and north Germany at about {{show.lc_p10|yr}} BC, the rest of France at about {{show.rof_p10|yr}} BC and southern and eastern Spain last, at about {{show.ses_p10|yr}} BC. Taken together, the {{c14.primary.atlantic_vs_other.n_atl}} dated tombs in Atlantic-facing regions start earlier than the {{c14.primary.atlantic_vs_other.n_other}} in Mediterranean and inland ones: median {{c14.primary.atlantic_vs_other.median_atl|yr}} BC against {{c14.primary.atlantic_vs_other.median_other|yr}} BC.</p>
+<p>Now the caution. The intervals are wide and overlap: north-west France could plausibly begin anywhere between about {{show.nwf_hi|yr}} and {{show.nwf_lo|yr}} BC on this evidence, and {{show.second_region}} between about {{show.second_hi|yr}} and {{show.second_lo|yr}} BC. And within regions, tombs nearer the coast are not earlier than tombs inland: the rank correlation between a tomb's start and its distance to the sea is {{c14.primary.spearman_start_vs_coast.rho|f2}} across {{c14.primary.spearman_start_vs_coast.n}} linked tombs, which is nothing. If boats carried the idea, they carried it between regions, not visibly from the beach inland.</p>
+<div class="figure">
+  <p class="fig-h">The earliest single dates</p>
+  <p class="fig-sub">The twelve earliest monument start dates in the linked set. Treat single dates with care: several are known to be debated or may predate the stones.</p>
+  <div class="tablewrap"><table class="t" id="etab"></table></div>
+</div>
+
+<h2><span class="n">05 · Test three</span>The Atlantic facade, type by type</h2>
+<p>The third test asks where each kind of monument lives. I split Europe into three zones: within 50 km of the Atlantic and northern seas (including the Channel, the North Sea and the Baltic), within 50 km of the Mediterranean and Black Sea, and inland. Random land in the same countries puts {{show.z_rand_atl|pct0}} of points in the Atlantic zone; {{show.z_all_atl|pct0}} of megalithic monuments are there.</p>
+<div class="figure">
+  <p class="fig-h">Atlantic, Mediterranean or inland?</p>
+  <p class="fig-sub">Share of each type within 50 km of each sea, or more than 50 km from any coast. Baselines at the bottom.</p>
+  <div class="chart" id="zones"></div>
+</div>
+<p>Some types are emphatically Atlantic: {{show.z_longb_atl|pct0}} of long barrows, {{show.z_cpw_atl|pct0}} of Irish court, portal and wedge tombs, {{show.z_rows_atl|pct0}} of stone rows and alignments and {{show.z_circle_atl|pct0}} of stone circles. But dolmens, the commonest tomb, lie about half inland ({{show.z_dolmen_inland|pct0}}), and tombs as a whole are in the Atlantic zone no more often than ordinary barrows in the same countries ({{show.z_tomb_atl|pct0}} against {{show.z_tum_atl|pct0}}). The tombs' Atlantic flavour, in other words, is largely the Atlantic flavour of where Neolithic and Bronze Age people buried their dead at all.</p>
+
+<h2><span class="n">06 · Verdict</span>So, was there a highway?</h2>
+<p>Each test leans the same way. Megaliths are more coastal than the land around them; the earliest dated tombs cluster in north-west France and the Atlantic regions start earlier than the rest; and the most distinctive types, stone rows, circles, long barrows and the Irish court tombs, belong to the Atlantic fringe. That is what a sea-borne idea would leave behind.</p>
+<p>But it is also what you would see if Atlantic Europe simply had more good stone, more people near the coast and more archaeologists with radiocarbon budgets. Megalithic tombs are only modestly more coastal than other burial mounds, and the regional dates rest on a few dozen tombs per region at best. The data fit the highway. They do not prove it was used.</p>
+
+<h2><span class="n">07 · Caveats</span>What the data can and cannot show</h2>
+<div class="note">
+  <h3>Method in brief</h3>
+  <p><b>Monuments.</b> OpenStreetMap objects tagged as megaliths (archaeological_site=megalith, megalith_type, or historic=menhir, standing_stone, stone_circle or dolmen), plus stone circles found by a multilingual name search and checked against their tags and names. Points within 15 m of another of the same type were merged, which removed {{data.duplicates_removed|int}} duplicates, mostly a node and an outline for one monument or the separate stones of one row. Outlines are placed at their first vertex. Only countries Natural Earth assigns to Europe are kept. Period labels come from OpenStreetMap tags and, where an object links to Wikidata, from Wikidata; {{show.not_recorded|int}} monuments have none.</p>
+  <p><b>Coast.</b> Distance to the Natural Earth 1:10m coastline, in an equal-area projection. Random points: ten per monument, uniform on land within the same country. Barrows: OpenStreetMap tumuli without a megalithic tag. Intervals resample 50 km grid cells.</p>
+  <p><b>Dates.</b> p3k14c (uncalibrated), marine shell removed, calibrated one by one with IntCal20 on a 5 year grid; I use the median. Links: a megalithic keyword in the site name, or a shared distinctive name with an OSM megalith within 1 km. Adding sites that only lie within 150 m of a megalith (a looser rule) keeps north-west France first. Regions are drawn with simple boxes and country borders, set out in the code.</p>
+</div>
+<p><b>Coverage is uneven.</b> OpenStreetMap reflects where volunteers have mapped and how they tag. France has {{show.france_n|int}} megaliths here, Denmark only {{show.denmark_n|int}} and Sweden {{show.sweden_n|int}}; Denmark instead has {{show.denmark_tumuli|int}} mounds tagged as plain tumuli, some of which will be megalithic tombs, and those sit in the barrow baseline. That is why every comparison is made within countries. Types are tagged inconsistently: one mapper's dolmen is another's chamber tomb, and {{data.by_class.unk|int}} monuments have no type at all.</p>
+<p><b>Radiocarbon coverage is uneven too.</b> Britain and Ireland are dated far more densely than Iberia or Scandinavia, and Sardinia, Italy and south-east Europe have almost no dated tombs in the linked set. A region with few dates will look later than it was simply because its earliest tombs have not been dated. Earliest dates can come from material older than the monument; a 10th percentile softens this but does not remove it.</p>
+<p><b>Coasts move.</b> Sea level and shorelines have changed since the Neolithic, especially around the North Sea and the Baltic, so present-day distances are only a guide.</p>
+<p><b>What this cannot show.</b> Distance and dates are consistent with a maritime spread but cannot separate it from other explanations, such as people independently building in stone where good stone lay near the coast. This is a test of open data, not a substitute for the detailed regional chronologies archaeologists build site by site.</p>
+
+<h2><span class="n">08 · More</span>Companions, data and sources</h2>
+<p>Two companion studies use the same OpenStreetMap and Wikidata pull: <a href="https://tristan-hotham.github.io/stone-circles/">Stone Circles</a> and <a href="https://tristan-hotham.github.io/barrows-of-europe/">Barrows of Europe</a>.</p>
+<div class="cta"><a class="p" href="https://github.com/Tristan-Hotham/megalith-highway">Data and code</a><a href="https://doi.org/10.5281/zenodo.23685254">Read the paper</a><a href="https://blog.tristanhotham.com/">Blog home</a></div>
+<p class="src">Sources: OpenStreetMap contributors, extract via the QLever OSM planet endpoint, 27 October 2026 (ODbL 1.0). Bird, D. et al. 2022. p3k14c, a synthetic global database of archaeological radiocarbon dates. <i>Scientific Data</i> 9, 27. Reimer, P. et al. 2020. The IntCal20 Northern Hemisphere radiocarbon age calibration curve (0 to 55 cal kBP). <i>Radiocarbon</i> 62. Schulz Paulsson, B. 2019. Radiocarbon dates and Bayesian modeling support maritime diffusion model for megaliths in Europe. <i>PNAS</i> 116 (9), 3460 to 3465. Wikidata (CC0). Natural Earth (public domain).</p>

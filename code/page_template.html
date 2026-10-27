@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Megalith Highway</title>
+<meta name="description" content="{{data.megaliths|int}} megalithic monuments from OpenStreetMap on one map, and three honest tests of whether the idea of the great stone tomb travelled along Europe's Atlantic coast by sea.">
+<meta property="og:title" content="The Megalith Highway: did the idea travel by sea?">
+<meta property="og:description" content="Dolmens, passage graves, menhirs, stone circles and nuraghi on one map, with three tests of the sea-route story: coast distance, radiocarbon dates and the Atlantic facade.">
+<meta property="og:image" content="https://tristan-hotham.github.io/megalith-highway/header.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Granite and sand. Deep blue = the sea and the Atlantic. Terracotta and ochre = tombs. Blues and greens = standing stones. */
+:root{
+  --bg:#F4F1EA; --panel:#E9E4D8; --fg:#1B2430; --muted:#5F6875; --rule:#D9D3C5; --card:#FBFAF6; --border:#C8C0AE;
+  --hot:#B9472A; --sea:#1F4E79; --ochre:#C98A1E; --moss:#4D7A3A; --grey:#8E8A80; --sea2:#DCE5EA;
+  --c0:#B5452B; --c1:#D9822B; --c2:#8C5A2B; --c3:#D9A92E; --c4:#7A2E3A; --c5:#C46F8E; --c6:#1F5FA8; --c7:#3B9DC4; --c8:#2E8B6E; --c9:#6D4BA3; --c10:#6B7F3A; --c11:#8E8A80;
+  --z0:#1F4E79; --z1:#C98A1E; --z2:#A39C8C;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12161B; --panel:#1B2027; --fg:#ECE8DF; --muted:#A3A9B2; --rule:#2E343C; --card:#191E24; --border:#3E4651;
+  --hot:#E8714E; --sea:#7FB0DE; --ochre:#E6B04A; --moss:#86B66B; --grey:#8C8A84; --sea2:#18222C;
+  --c0:#E46F52; --c1:#F0A24E; --c2:#C99260; --c3:#EBC75A; --c4:#D3707F; --c5:#E39BB6; --c6:#6FA3E8; --c7:#6FC6E6; --c8:#5BC29E; --c9:#A98BE0; --c10:#A8BB6B; --c11:#9C9890;
+  --z0:#7FB0DE; --z1:#E6B04A; --z2:#7C7A74; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161B; --panel:#1B2027; --fg:#ECE8DF; --muted:#A3A9B2; --rule:#2E343C; --card:#191E24; --border:#3E4651;
+  --hot:#E8714E; --sea:#7FB0DE; --ochre:#E6B04A; --moss:#86B66B; --grey:#8C8A84; --sea2:#18222C;
+  --c0:#E46F52; --c1:#F0A24E; --c2:#C99260; --c3:#EBC75A; --c4:#D3707F; --c5:#E39BB6; --c6:#6FA3E8; --c7:#6FC6E6; --c8:#5BC29E; --c9:#A98BE0; --c10:#A8BB6B; --c11:#9C9890;
+  --z0:#7FB0DE; --z1:#E6B04A; --z2:#7C7A74; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1120px,calc(100vw - 32px));margin-left:calc((100% - min(1120px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--sea);color:var(--bg);padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(52px,13vw,112px)/.86 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance;font-variation-settings:"SOFT" 50}
+h1 em{font-style:normal;color:var(--sea)}
+.mark{width:clamp(96px,22vw,190px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:44ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hot);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--sea)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(28px,6vw,40px)/1 var(--display);color:var(--fg)}
+.stats b.h{color:var(--hot)}.stats b.s{color:var(--sea)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:280px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+select,input[type=search]{font:400 13px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 8px;min-height:36px;max-width:100%}
+input[type=search]{flex:1 1 180px;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.chip{font:400 12px/1 var(--mono);display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);background:var(--card);color:var(--fg);border-radius:99px;padding:6px 10px 6px 8px;cursor:pointer;min-height:32px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.chip[aria-pressed="false"]{opacity:.42;background:transparent}
+.chip .k{color:var(--muted)}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:860px){.mapgrid{grid-template-columns:1fr}}
+#map{height:clamp(440px,76vh,700px);border:1px solid var(--border);background:var(--sea2);border-radius:2px;z-index:0;position:relative}
+.timebar{display:flex;gap:10px;align-items:center;margin:10px 0 0;flex-wrap:wrap}
+.timebar input[type=range]{flex:1 1 220px;accent-color:var(--hot);min-width:0}
+.timebar .yr{font:800 26px/1 var(--display);min-width:5.4em;color:var(--hot)}
+.timebar .cnt{font:400 12px/1.35 var(--mono);color:var(--muted);flex:1 1 100%}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.legend i.ramp{display:inline-block;width:120px;height:10px;vertical-align:-1px;margin:0 6px;border-radius:2px}
+.side{display:flex;flex-direction:column;gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--hot);padding:12px 14px;font:400 13px/1.5 var(--mono)}
+.card.empty{border-left-color:var(--border);color:var(--muted)}
+.card b{font:600 18px/1.2 var(--display);display:block;margin-bottom:6px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:6px 0 8px}
+.card dt{color:var(--muted)}.card dd{margin:0}
+.counts{font:400 12.5px/1.45 var(--mono);color:var(--muted)}
+.counts b{color:var(--fg);font-weight:500}
+.results{list-style:none;margin:0;padding:0;font:400 12.5px/1.3 var(--mono);max-height:220px;overflow:auto;border:1px solid var(--rule);background:var(--card)}
+.results:empty{display:none}
+.results li{padding:7px 10px;border-bottom:1px solid var(--rule);cursor:pointer}
+.results li:hover,.results li:focus-visible{background:var(--panel);outline:none}
+.results li span{color:var(--muted)}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--sea);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right}
+.tablewrap{overflow-x:auto}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--sea);border-color:var(--sea);color:var(--bg)}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1001}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea2)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--fg);border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.leaflet-popup-content{margin:10px 12px;font:400 12.5px/1.45 var(--mono)}
+.leaflet-popup-content b{font:600 15px/1.2 var(--display);display:block;margin-bottom:4px}
+.leaflet-container a.leaflet-popup-close-button{color:var(--muted)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)!important;font-size:10px}
+.leaflet-control-attribution a{color:var(--fg)!important}
+.leaflet-popup-content a{color:var(--hot)}
+.leaflet-bar a{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-bar a:hover{background:var(--panel)}
+.leaflet-bar{border:1px solid var(--border)!important}
+canvas.dots{position:absolute;left:0;top:0;pointer-events:none}
+@media print{.theme,.controls,.timebar{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Prehistory × the sea</span><span>Europe, 5500 to 500 BC</span></div>
+<header class="hero">
+  <h1>The Megalith <em>Highway</em></h1>
+  <svg class="mark" viewBox="-100 -100 200 200" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">Portugal, Galicia, Brittany, Ireland, Wales, Orkney and Scandinavia built recognisably the same great stone tombs. I put {{data.megaliths|int}} megalithic monuments on one map and tested, three honest ways, whether the idea travelled by sea.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · October 2026 · Data: OpenStreetMap, p3k14c radiocarbon dates, IntCal20, Natural Earth</div>
+
+<!--PROSE-->
+
+<footer>
+  <p>Dr Tristan Hotham, researcher on social media, campaigns and politics. Independent researcher. <a href="https://blog.tristanhotham.com/">Blog</a> · <a href="https://blog.tristanhotham.com/2026/10/27/megalith-highway/">The post about this study</a> · Paper: <a href="https://doi.org/10.5281/zenodo.23685254">doi.org/10.5281/zenodo.23685254</a></p>
+  <p>Monuments: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the Open Database Licence (ODbL 1.0); extract of 27 October 2026. Radiocarbon dates: <a href="https://github.com/people3k/p3k14c">p3k14c</a> (Bird et al. 2022, <i>Scientific Data</i>), data CC0 1.0 with attribution requested. Calibration curve: IntCal20 (Reimer et al. 2020, <i>Radiocarbon</i>), file from the <a href="https://github.com/ahb108/rcarbon">rcarbon</a> package. Period and culture labels in part from <a href="https://www.wikidata.org">Wikidata</a> (CC0). Coastlines and countries: <a href="https://www.naturalearthdata.com">Natural Earth</a> (public domain). Base map tiles © Esri, HERE, Garmin, © OpenStreetMap contributors, and the GIS user community. Map library: Leaflet.</p>
+  <p>The derived monument data on this page and in the repository are released under the ODbL 1.0, because they are derived from OpenStreetMap. Text and figures are CC BY 4.0. Code is MIT.</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+/*DATA*/
+const NS = "http://www.w3.org/2000/svg";
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const fmt = n => Math.round(n).toLocaleString("en-GB");
+const pc = (x, d = 0) => (x * 100).toFixed(d) + "%";
+const yr = v => Math.round(v) + " BC";
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function hover(node, h) { node.style.cursor = "pointer"; node.setAttribute("tabindex", "0"); const s = () => { const r = node.getBoundingClientRect(); showTip(h, r.left + r.width / 2, r.top); }; node.addEventListener("pointerenter", s); node.addEventListener("focus", s); node.addEventListener("pointerleave", hideTip); node.addEventListener("blur", hideTip); node.addEventListener("click", e => { e.stopPropagation(); s(); }); }
+document.addEventListener("click", hideTip);
+const redraws = [];
+function resp(box, render) { let last = 0; const go = (force) => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); redraws.push(() => go(true)); go(); }
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const R = D.R;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const CL = R.classes; const CC = CL.map((c, i) => "--c" + i);
+const ZC = ["--z0", "--z1", "--z2"];
+
+document.getElementById("theme").onclick = () => { const r = document.documentElement; const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; r.dataset.theme = dark ? "light" : "dark"; redraws.forEach(f => f()); window.__restyle && window.__restyle(); };
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+
+/* hero mark: a dolmen on a headland, with a dotted sea route */
+(() => { const g = document.getElementById("heroMark");
+  for (let i = 0; i < 4; i++) el("path", { d: `M-98 ${48 + i * 12} q12 -7 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0`, fill: "none", stroke: "var(--sea)", "stroke-width": 2.4 - i * .35, opacity: .9 - i * .18 }, g);
+  el("path", { d: "M-6 40 L-2 -6 L10 -6 L12 40 Z", fill: "var(--fg)" }, g);
+  el("path", { d: "M40 40 L42 -2 L54 -2 L56 40 Z", fill: "var(--fg)" }, g);
+  el("path", { d: "M-22 -4 C-10 -20 60 -24 76 -8 C80 -2 72 4 60 4 L-14 6 C-24 6 -28 2 -22 -4 Z", fill: "var(--hot)" }, g);
+  el("path", { d: "M-96 -60 C-60 -90 -10 -84 18 -50", fill: "none", stroke: "var(--sea)", "stroke-width": 2.4, "stroke-dasharray": "2 6", "stroke-linecap": "round" }, g);
+  [[-96, -60], [18, -50]].forEach(([x, y]) => el("circle", { cx: x, cy: y, r: 5, fill: "var(--ochre)" }, g));
+})();
+
+/* ===== data ===== */
+const P = D.p.map((r, i) => ({ i, lat: r[0], lon: r[1], c: r[2], k: r[3], per: r[4], name: r[5], osm: r[6], coast: r[7], z: r[8], wd: r[9], start: r[10] }));
+const RC = D.rc.map(r => ({ lat: r[0], lon: r[1], start: r[2], site: r[3], reg: D.regions[r[4]], c: r[5], rule: r[6], lab: r[7], age: r[8], err: r[9], osm: r[10] }));
+const T0 = 5500, T1 = 500;
+function timeCol(bc) { // earliest = deep terracotta, latest = deep blue, through ochre
+  const t = Math.max(0, Math.min(1, (T0 - bc) / (T0 - T1)));
+  const stops = isDark() ? [[232, 113, 78], [230, 176, 74], [127, 176, 222]] : [[160, 52, 28], [205, 145, 32], [31, 78, 121]];
+  const a = t < .5 ? stops[0] : stops[1], b = t < .5 ? stops[1] : stops[2], u = t < .5 ? t * 2 : (t - .5) * 2;
+  return `rgb(${a.map((v, j) => Math.round(v + (b[j] - v) * u)).join(",")})`;
+}
+
+/* ===== map ===== */
+(() => {
+  const card = document.getElementById("card");
+  if (!window.L) { document.getElementById("map").innerHTML = '<p style="padding:16px;font:400 13px/1.5 var(--mono)">The map library did not load. The charts below still work.</p>'; return; }
+  const on = CL.map(() => true); let country = -1, period = -1, mode = "type", year = T1, sel = null, playing = null;
+  const map = L.map("map", { scrollWheelZoom: false, zoomSnap: .25, minZoom: 3, maxZoom: 16, worldCopyJump: false }).fitBounds([[35.5, -10.5], [61, 25]]);
+  map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+  map.on("focus", () => map.scrollWheelZoom.enable()); map.on("blur", () => map.scrollWheelZoom.disable());
+  const tileUrl = () => `https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/${isDark() ? "World_Dark_Gray_Base" : "World_Light_Gray_Base"}/MapServer/tile/{z}/{y}/{x}`;
+  const tiles = L.tileLayer(tileUrl(), { maxZoom: 16, attribution: 'Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors, and the GIS user community · Monuments &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL)' }).addTo(map);
+  /* one canvas for every dot: fast enough for all monuments at once */
+  const pane = map.createPane("dotpane"); pane.style.zIndex = 450; pane.style.pointerEvents = "none";
+  const cv = L.DomUtil.create("canvas", "dots", pane); const ctx = cv.getContext("2d");
+  let C = {}; const col = v => C[v] || (C[v] = css(v));
+  const vis = p => on[p.c] && (country < 0 || p.k === country) && (period < 0 || p.per === period);
+  let shown = [];
+  function draw() {
+    const s = map.getSize(), dpr = window.devicePixelRatio || 1;
+    cv.width = s.x * dpr; cv.height = s.y * dpr; cv.style.width = s.x + "px"; cv.style.height = s.y + "px";
+    L.DomUtil.setPosition(cv, map.containerPointToLayerPoint([0, 0]));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, s.x, s.y);
+    const z = map.getZoom(), r = Math.max(1.6, Math.min(6, 1.2 + (z - 4) * .75)), b = map.getBounds().pad(.05);
+    shown = [];
+    const bg = col("--bg");
+    if (mode === "type") {
+      ctx.lineWidth = z > 7 ? 1 : .5; ctx.strokeStyle = bg;
+      for (const p of P) { if (!vis(p) || !b.contains([p.lat, p.lon])) continue; const q = map.latLngToContainerPoint([p.lat, p.lon]); shown.push([q.x, q.y, p]);
+        ctx.beginPath(); ctx.arc(q.x, q.y, r, 0, 6.2832); ctx.fillStyle = col(CC[p.c]); ctx.globalAlpha = .88; ctx.fill(); if (z > 6) { ctx.globalAlpha = 1; ctx.stroke(); } }
+    } else {
+      ctx.globalAlpha = .35; ctx.fillStyle = col("--grey");
+      for (const p of P) { if (!vis(p) || !b.contains([p.lat, p.lon])) continue; const q = map.latLngToContainerPoint([p.lat, p.lon]); shown.push([q.x, q.y, p]); ctx.beginPath(); ctx.arc(q.x, q.y, Math.max(1.2, r * .6), 0, 6.2832); ctx.fill(); }
+      ctx.globalAlpha = 1; ctx.lineWidth = 1.4; ctx.strokeStyle = col("--fg");
+      const R2 = r * 1.5 + 2.5;
+      for (const d of RC) { if (d.start < year || !on[d.c] || !b.contains([d.lat, d.lon])) continue; const q = map.latLngToContainerPoint([d.lat, d.lon]); shown.push([q.x, q.y, d, 1]);
+        const fresh = d.start - year < 150 && playing;
+        if (fresh) { ctx.beginPath(); ctx.arc(q.x, q.y, R2 * 2.4, 0, 6.2832); ctx.fillStyle = timeCol(d.start); ctx.globalAlpha = .22; ctx.fill(); ctx.globalAlpha = 1; }
+        ctx.beginPath(); ctx.arc(q.x, q.y, R2, 0, 6.2832); ctx.fillStyle = timeCol(d.start); ctx.fill(); ctx.stroke(); }
+    }
+    if (sel) { const q = map.latLngToContainerPoint([sel.lat, sel.lon]); ctx.globalAlpha = 1; ctx.beginPath(); ctx.arc(q.x, q.y, r + 6, 0, 6.2832); ctx.lineWidth = 2.5; ctx.strokeStyle = col("--hot"); ctx.stroke(); }
+    counts();
+  }
+  map.on("move zoomend resize viewreset", draw); map.on("zoomstart", () => cv.style.opacity = 0); map.on("zoomend", () => cv.style.opacity = 1);
+  map.on("click", e => { const q = e.containerPoint; let best = null, bd = 144; for (const s of shown) { const dd = (s[0] - q.x) ** 2 + (s[1] - q.y) ** 2; if (dd < bd || (s[3] && dd < bd + 30)) { bd = dd; best = s; } } if (best) select(best[2], !!best[3]); else select(null); });
+  const osmUrl = o => `https://www.openstreetmap.org/${{ n: "node", w: "way", r: "relation" }[o[0]]}/${o.slice(1)}`;
+  function select(p, isDate) {
+    sel = p; map.closePopup();
+    if (!p) { card.className = "card empty"; card.innerHTML = "Tap a dot to see what it is. In the radiocarbon view, the large dots are dated monuments."; draw(); return; }
+    let h;
+    if (isDate) {
+      h = `<b>${esc(p.site)}</b><dl><dt>Region</dt><dd>${esc(p.reg)}</dd><dt>Type</dt><dd>${esc(CL[p.c].short)}</dd><dt>Earliest date</dt><dd style="color:var(--hot);font-weight:500">about ${yr(p.start)}</dd><dt>Lab code</dt><dd>${esc(p.lab)}: ${fmt(p.age)} ± ${p.err} BP</dd><dt>Linked by</dt><dd>${{ K: "name keyword", N: "shared name", NP: "shared name, within 150 m", KN: "keyword and shared name", KNP: "keyword, name and place", KP: "keyword, within 150 m" }[p.rule] || p.rule}</dd>${p.osm ? `<dt>OSM monument</dt><dd>${esc(p.osm)}</dd>` : ""}</dl><div style="color:var(--muted)">Median of the calibrated date (IntCal20). The earliest date at a site can predate the stones.</div>`;
+    } else {
+      h = `<b>${esc(p.name || CL[p.c].short)}</b><dl><dt>Type</dt><dd><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:var(${CC[p.c]});margin-right:6px"></i>${esc(CL[p.c].short)}</dd><dt>Country</dt><dd>${esc(D.countries[p.k])}</dd><dt>Period tag</dt><dd>${esc(D.periods[p.per])}</dd><dt>To the coast</dt><dd>${p.coast.toFixed(1)} km</dd><dt>Zone</dt><dd>${esc(D.zones[p.z])}</dd>${p.start ? `<dt>Earliest date</dt><dd style="color:var(--hot);font-weight:500">about ${yr(p.start)}</dd>` : ""}</dl><a href="${osmUrl(p.osm)}" target="_blank" rel="noopener">OpenStreetMap record</a>${p.wd ? ` · <a href="https://www.wikidata.org/wiki/${p.wd}" target="_blank" rel="noopener">Wikidata ${p.wd}</a>` : ""}`;
+    }
+    card.className = "card"; card.innerHTML = h; draw();
+  }
+  /* filters */
+  const chips = document.getElementById("chips");
+  CL.forEach((c, i) => { const b = document.createElement("button"); b.className = "chip"; b.setAttribute("aria-pressed", "true"); b.innerHTML = `<i style="background:var(${CC[i]})"></i>${esc(c.label)} <span class="k">${fmt(R.data.by_class[c.id])}</span>`;
+    b.onclick = () => { on[i] = !on[i]; b.setAttribute("aria-pressed", on[i]); draw(); }; chips.appendChild(b); });
+  const setAll = v => { on.fill(v); chips.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", v)); draw(); };
+  document.getElementById("all").onclick = () => setAll(true);
+  document.getElementById("tombs").onclick = () => { CL.forEach((c, i) => on[i] = c.tomb); chips.querySelectorAll(".chip").forEach((b, i) => b.setAttribute("aria-pressed", on[i])); draw(); };
+  document.getElementById("stones").onclick = () => { CL.forEach((c, i) => on[i] = ["menhir", "rows", "circle"].includes(c.id)); chips.querySelectorAll(".chip").forEach((b, i) => b.setAttribute("aria-pressed", on[i])); draw(); };
+  const cs = document.getElementById("country"), ps = document.getElementById("period");
+  const cn = D.countries.map((n, i) => [n, i, P.filter(p => p.k === i).length]).sort((a, b) => b[2] - a[2]);
+  cs.innerHTML = `<option value="-1">All countries</option>` + cn.map(([n, i, k]) => `<option value="${i}">${esc(n)} (${fmt(k)})</option>`).join("");
+  ps.innerHTML = `<option value="-1">Any period tag</option>` + D.periods.map((n, i) => `<option value="${i}">${esc(n)} (${fmt(P.filter(p => p.per === i).length)})</option>`).join("");
+  cs.onchange = () => { country = +cs.value; draw(); if (country >= 0) { const ll = P.filter(p => p.k === country).map(p => [p.lat, p.lon]); if (ll.length) map.flyToBounds(L.latLngBounds(ll).pad(.1), { duration: reduce ? 0 : .8, maxZoom: 9 }); } };
+  ps.onchange = () => { period = +ps.value; draw(); };
+  function counts() {
+    const n = P.filter(vis).length;
+    let s = `<b>${fmt(n)}</b> of ${fmt(P.length)} monuments match the filters.`;
+    if (mode === "time") { const d = RC.filter(x => x.start >= year && on[x.c]); const rg = new Set(d.map(x => x.reg)); s += ` By <b>${yr(year)}</b>: <b>${d.length}</b> dated monuments in <b>${rg.size}</b> regions.`; }
+    document.getElementById("counts").innerHTML = s;
+  }
+  /* time slider */
+  const sl = document.getElementById("slider"), yl = document.getElementById("yr"), pb = document.getElementById("play");
+  const setYear = v => { year = v; sl.value = -v; yl.textContent = yr(v); draw(); };
+  sl.oninput = () => { stop(); if (mode !== "time") setMode("time"); setYear(-sl.value); };
+  function stop() { if (playing) { cancelAnimationFrame(playing); playing = null; pb.textContent = "▶ Play the spread"; draw(); } }
+  pb.onclick = () => { if (playing) return stop(); if (mode !== "time") setMode("time"); let y = year <= T1 + 1 ? T0 : year, last = null; pb.textContent = "❚❚ Pause";
+    const step = t => { if (last == null) last = t; y -= (t - last) / 1000 * 380; last = t; if (y <= T1) { setYear(T1); playing = null; pb.textContent = "▶ Play the spread"; draw(); return; } setYear(Math.round(y / 10) * 10); playing = requestAnimationFrame(step); };
+    playing = requestAnimationFrame(step); };
+  function setMode(m) { mode = m; document.querySelectorAll("[data-mode]").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === m)); legend(); draw(); }
+  document.querySelectorAll("[data-mode]").forEach(b => b.onclick = () => { stop(); setMode(b.dataset.mode); });
+  function legend() {
+    const lg = document.getElementById("legend");
+    if (mode === "type") lg.innerHTML = `<span>Colour = type of monument (use the buttons above to filter)</span>`;
+    else lg.innerHTML = `<span><i style="background:var(--grey);opacity:.6"></i>Monument, not dated here</span><span>Earliest date: ${yr(T0)}<i class="ramp" id="ramp"></i>${yr(T1)}</span>`;
+    const rp = document.getElementById("ramp"); if (rp) rp.style.background = `linear-gradient(90deg,${[5500, 4250, 3000, 1750, 500].map(timeCol).join(",")})`;
+  }
+  /* search */
+  const q = document.getElementById("q"), res = document.getElementById("res");
+  const named = P.filter(p => p.name);
+  q.addEventListener("input", () => { const v = q.value.trim().toLowerCase(); res.innerHTML = ""; if (v.length < 3) return;
+    named.filter(p => p.name.toLowerCase().includes(v)).slice(0, 12).forEach(p => { const li = document.createElement("li"); li.tabIndex = 0; li.innerHTML = `${esc(p.name)} <span>${esc(CL[p.c].short)}, ${esc(D.countries[p.k])}</span>`;
+      const go = () => { res.innerHTML = ""; q.value = p.name; if (mode !== "type") setMode("type"); map.setView([p.lat, p.lon], 12, { animate: !reduce }); select(p, false); };
+      li.onclick = go; li.onkeydown = e => { if (e.key === "Enter") go(); }; res.appendChild(li); }); });
+  window.__restyle = () => { C = {}; tiles.setUrl(tileUrl()); legend(); draw(); };
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", window.__restyle);
+  window.__mode = setMode; window.__year = setYear; window.__map = map;
+  setYear(T1); legend(); select(null);
+})();
+
+/* ===== coast distance bands ===== */
+resp(document.getElementById("bands"), (W, nar) => {
+  const g = R.coast.groups.all, labs = R.coast.band_labels, ser = [["Megalithic monuments", g.bands_observed, "--hot"], ["Barrows and tumuli, same countries", g.bands_tumuli, "--ochre"], ["Random land, same countries", g.bands_random, "--grey"]];
+  const H = nar ? 320 : 320, m = { l: 40, r: 8, t: nar ? 54 : 34, b: nar ? 44 : 44 }, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share of monuments by distance to the coast" }, document.getElementById("bands"));
+  const max = Math.ceil(Math.max(...ser.flatMap(s => s[1])) * 10) / 10, n = labs.length, gw = (W - m.l - m.r) / n, bw = gw * .26, Y = v => H - m.b - v / max * (H - m.t - m.b);
+  for (let t = 0; t <= max + 1e-9; t += .1) { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, pc(t), "lab m s", "end"); }
+  labs.forEach((L0, i) => { const x0 = m.l + i * gw + gw * .1;
+    ser.forEach(([nm, v, c], j) => { const r = el("rect", { x: x0 + j * bw, y: Y(Math.min(v[i], max)), width: bw - 1, height: Y(0) - Y(Math.min(v[i], max)), fill: `var(${c})`, opacity: j === 2 ? .7 : .9 }, svg); hover(r, `<b>${L0} from the coast</b><br>${nm}: ${pc(v[i], 1)}`); });
+    const t = L0.replace("Under ", "<").replace("Over ", ">").replace(" to ", "-").replace(" km", ""); lbl(svg, x0 + bw * 1.5, H - m.b + 15, nar ? t : L0.replace("Under", "under").replace("Over", "over"), "lab m s", "middle"); });
+  lbl(svg, (W + m.l) / 2, H - 8, nar ? "Distance to the sea (km)" : "Distance to the nearest sea coast", "lab m s", "middle");
+  let x = 0; ser.forEach(([nm, , c], j) => { const yy = nar ? 10 + j * 16 : 10; if (nar) x = 0; el("rect", { x, y: yy - 8, width: 10, height: 10, fill: `var(${c})` }, svg); const t = lbl(svg, x + 14, yy + 1, nm, "lab s"); if (!nar) x += t.getComputedTextLength() + 34; });
+});
+
+/* ===== coast by group ===== */
+resp(document.getElementById("groups"), (W, nar) => {
+  const G = R.coast.groups, rows = [["All megalithic", G.all], ["Tombs", G.tombs], ["Menhirs, rows, circles", G.standing], ["Nuraghi and talaiots", G.tower]];
+  const rowH = 52, m = { l: nar ? 8 : 180, r: 20, t: 10, b: 70 }, H = rows.length * rowH + m.t + m.b + (nar ? rows.length * 16 : 0);
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share within 10 km of the coast, by group, against two baselines" }, document.getElementById("groups"));
+  const X = v => m.l + v / .8 * (W - m.l - m.r);
+  for (let t = 0; t <= .8 + 1e-9; t += .2) { el("line", { x1: X(t), x2: X(t), y1: m.t, y2: H - m.b, stroke: "var(--rule)" }, svg); lbl(svg, X(t), H - m.b + 16, pc(t), "lab m s", "middle"); }
+  lbl(svg, (W + m.l) / 2, H - m.b + 32, "Share within 10 km of the sea", "lab m s", "middle");
+  rows.forEach(([nm, g], i) => { const y = m.t + i * (rowH + (nar ? 16 : 0)) + (nar ? 34 : 24);
+    lbl(svg, nar ? m.l : m.l - 12, nar ? y - 18 : y + 4, `${nm} (${fmt(g.n)})`, "lab b", nar ? "start" : "end");
+    el("line", { x1: X(Math.min(g.random_near, g.tumuli_near, g.observed_near)), x2: X(Math.max(g.random_near, g.tumuli_near, g.observed_near)), y1: y, y2: y, stroke: "var(--border)", "stroke-width": 2 }, svg);
+    if (g.observed_near_ci) el("line", { x1: X(g.observed_near_ci[0]), x2: X(Math.min(.8, g.observed_near_ci[1])), y1: y, y2: y, stroke: "var(--hot)", "stroke-width": 6, opacity: .25, "stroke-linecap": "round" }, svg);
+    const a = el("rect", { x: X(g.random_near) - 5, y: y - 5, width: 10, height: 10, fill: "var(--grey)" }, svg); hover(a, `<b>Random land, same countries</b><br>${pc(g.random_near, 1)} within 10 km`);
+    const b = el("path", { d: `M${X(g.tumuli_near)} ${y - 7}l7 7l-7 7l-7 -7z`, fill: "var(--ochre)" }, svg); hover(b, `<b>Barrows and tumuli, same country mix</b><br>${pc(g.tumuli_near, 1)} within 10 km`);
+    const c = el("circle", { cx: X(g.observed_near), cy: y, r: 7, fill: "var(--hot)", stroke: "var(--bg)", "stroke-width": 2 }, svg); hover(c, `<b>${nm}</b><br>${pc(g.observed_near, 1)} within 10 km of the sea<br>95% interval ${pc(g.observed_near_ci[0])} to ${pc(g.observed_near_ci[1])} (resampling 50 km cells)<br>${g.ratio_random.toFixed(1)} times random land; ${g.ratio_tumuli.toFixed(2)} times barrows`); });
+  const ly = H - 8; let x = m.l;
+  el("circle", { cx: x + 5, cy: ly - 4, r: 5, fill: "var(--hot)" }, svg); lbl(svg, x + 14, ly, "Monuments", "lab s"); x += nar ? 92 : 110;
+  el("path", { d: `M${x + 5} ${ly - 10}l6 6l-6 6l-6 -6z`, fill: "var(--ochre)" }, svg); lbl(svg, x + 14, ly, "Barrows", "lab s"); x += nar ? 80 : 96;
+  el("rect", { x: x, y: ly - 9, width: 10, height: 10, fill: "var(--grey)" }, svg); lbl(svg, x + 14, ly, "Random land", "lab s");
+});
+
+/* ===== country table ===== */
+(() => { const t = document.getElementById("ctab"); const f = v => v == null ? "<span style='color:var(--muted)'>n/a</span>" : pc(v);
+  t.innerHTML = `<thead><tr><th>Country</th><th class="num">Monuments</th><th class="num">Within 10 km</th><th class="num">Random land</th><th class="num">Barrows</th></tr></thead><tbody>` +
+    R.coast.countries.map(r => `<tr><td>${r.country}</td><td class="num">${fmt(r.megaliths)}</td><td class="num" style="font-weight:500">${pc(r.near_share)}</td><td class="num">${pc(r.random_near_share)}</td><td class="num">${f(r.tumuli_near_share)}</td></tr>`).join("") + "</tbody>";
+})();
+
+/* ===== radiocarbon regions ===== */
+resp(document.getElementById("regs"), (W, nar) => {
+  const rows = R.c14.primary.regions.filter(r => r.tomb_p10_bc).sort((a, b) => b.tomb_p10_bc - a.tomb_p10_bc), rowH = nar ? 50 : 40, m = { l: nar ? 8 : 250, r: 24, t: 30, b: 46 };
+  const H = rows.length * rowH + m.t + m.b, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "When megalithic tombs begin, by region" }, document.getElementById("regs"));
+  const lo = 5500, hi = 2000, X = v => m.l + (lo - v) / (lo - hi) * (W - m.l - m.r);
+  for (let t = lo; t >= hi; t -= 500) { el("line", { x1: X(t), x2: X(t), y1: m.t, y2: H - m.b, stroke: "var(--rule)" }, svg); if (t % 1000 === 0 || (!nar && W > 900)) lbl(svg, X(t), H - m.b + 16, t + " BC", "lab m s", "middle"); }
+  lbl(svg, (W + m.l) / 2, H - 8, nar ? "Start of dated tombs (10th percentile)" : "Tombs begin: 10th percentile of earliest dates, with 95% bootstrap interval", "lab m s", "middle");
+  rows.forEach((r, i) => { const y = m.t + i * rowH + (nar ? 30 : 20); const c = r.atlantic ? "var(--sea)" : "var(--ochre)";
+    lbl(svg, nar ? m.l : m.l - 12, nar ? y - 14 : y + 4, `${r.region} (${r.dated_tombs})`, "lab", nar ? "start" : "end");
+    el("line", { x1: X(Math.min(lo, r.tomb_p10_ci[1])), x2: X(r.tomb_p10_ci[0]), y1: y, y2: y, stroke: c, "stroke-width": 3, opacity: .45 }, svg);
+    const d = el("circle", { cx: X(r.tomb_p10_bc), cy: y, r: 7, fill: c, stroke: "var(--bg)", "stroke-width": 2 }, svg);
+    hover(d, `<b>${r.region}</b><br>${r.dated_tombs} dated tombs<br>10th percentile start: about ${yr(r.tomb_p10_bc)}<br>95% interval ${yr(r.tomb_p10_ci[1])} to ${yr(r.tomb_p10_ci[0])}<br>Earliest single date: ${esc(r.tomb_earliest_site)}, about ${yr(r.tomb_earliest_bc)}`); });
+  const ly = 12; el("circle", { cx: 5, cy: ly - 4, r: 5, fill: "var(--sea)" }, svg); lbl(svg, 14, ly, "Atlantic-facing region", "lab s"); el("circle", { cx: 195, cy: ly - 4, r: 5, fill: "var(--ochre)" }, svg); lbl(svg, 204, ly, "Mediterranean or inland", "lab s");
+});
+
+/* ===== earliest dates table ===== */
+(() => { const t = document.getElementById("etab");
+  t.innerHTML = `<thead><tr><th>Site (p3k14c name)</th><th>Region</th><th class="num">Earliest</th><th>Lab code</th></tr></thead><tbody>` +
+    R.c14.primary.earliest20.slice(0, 12).map(r => `<tr><td>${esc(r.site.replace(/ÔøΩ/g, "?"))}</td><td>${esc(r.region)}</td><td class="num">${yr(r.start_bc)}</td><td>${esc(r.start_labid)}</td></tr>`).join("") + "</tbody>";
+})();
+
+/* ===== zones by type ===== */
+resp(document.getElementById("zones"), (W, nar) => {
+  const rows = R.zones.rows.filter(r => r.id !== "unk"), rowH = 30, gap = 10, m = { l: nar ? 8 : 268, r: 10, t: 6, b: 40 };
+  const sepAt = rows.findIndex(r => r.id === "tombs");
+  const H = rows.length * (rowH + (nar ? 16 : 0)) + m.t + m.b + gap, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Share of each type in the Atlantic, Mediterranean and inland zones" }, document.getElementById("zones"));
+  const X = v => m.l + v * (W - m.l - m.r);
+  rows.forEach((r, i) => { const y = m.t + i * (rowH + (nar ? 16 : 0)) + (i >= sepAt ? gap : 0) + (nar ? 16 : 0);
+    const base = i >= sepAt; lbl(svg, nar ? m.l : m.l - 10, nar ? y - 4 : y + 19, `${r.type}${r.id === "random" ? "" : ` (${fmt(r.n)})`}`, base ? "lab b" : "lab", nar ? "start" : "end");
+    let x = 0; R.zones.zone_names.forEach((z, j) => { const v = r[z]; const rc = el("rect", { x: X(x), y: y + 4, width: Math.max(0, X(x + v) - X(x) - 1), height: rowH - 8, fill: `var(${ZC[j]})`, opacity: base ? .75 : .95 }, svg);
+      hover(rc, `<b>${r.type}</b><br>${z}: ${pc(v, 1)}`); if (j === 0 && v > .1) { const t = lbl(svg, X(x) + 6, y + 19, pc(v), "lab s b"); t.style.fill = "var(--bg)"; } x += v; }); });
+  const ly = H - 10; let x = 0; R.zones.zone_names.forEach((z, j) => { el("rect", { x, y: ly - 9, width: 10, height: 10, fill: `var(${ZC[j]})` }, svg); const t = lbl(svg, x + 14, ly, nar ? ["Atlantic", "Mediterranean", "Inland"][j] : z, "lab s"); x += t.getComputedTextLength() + 34; });
+});
+</script>
+</body>
+</html>
