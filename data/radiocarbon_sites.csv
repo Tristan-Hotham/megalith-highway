@@ -1,0 +1,477 @@
+site,lon,lat,n_dates,rule,cls,osm,osm_name,dist_m,country,start_bc,start_labid,start_age_bp,start_error,n_older_than_window,region,tomb,primary,dup_of_earlier,dup_any
+Carrowmore,-8.519167,54.25086,9,NP,dolmen,way/439081916,Carrowmore 2,57.0,Ireland,5445.0,UA-12736,6500.0,75.0,0,Ireland,True,True,False,False
+Soumont-Saint-Quentin «Les Longrais»,-0.209382,48.9689,8,NP,menhir,node/4859841920,Menhirs des Longrais,72.0,France,5430.0,GIF-2315,6490.0,160.0,0,North-west France,False,True,False,False
+Bulnuaran of Clava,-4.072,57.4735,3,NP,passage,way/41662528,Balnuaran of Clava NE,82.0,United Kingdom,5380.0,AA-21255,6410.0,80.0,1,Scotland,True,True,False,False
+Borger,6.79136,52.9264,4,N,dolmen,node/380606211,Hunebed D27 Borger,604.0,Netherlands,5320.0,GRN-6565,6345.0,45.0,3,"Low Countries, north Germany and Poland",True,True,False,False
+Er Grah,-2.9505,47.5719,4,NP,menhir,relation/19515438,Grand Menhir Brisé d'Er Grah,63.0,France,5270.0,A-8914,6305.0,70.0,0,North-west France,False,True,False,False
+Beaghmore,-6.9373,54.702,14,NP,circle,node/4259838231,Beaghmore Stone Circles,52.0,United Kingdom,5160.0,UB-95,6225.0,50.0,1,Ireland,False,True,False,False
+Table des Marchands,-2.9497,47.5714,15,NP,dolmen,way/1313226167,Table des Marchand,30.0,France,5145.0,LY-2508POZ,6210.0,50.0,0,North-west France,True,True,False,False
+LOCMARIAQUER table des Marchands,-2.94971,47.5715,17,NP,dolmen,way/1313226167,Table des Marchand,23.0,France,5145.0,LYON-2508,6209.0,50.0,0,North-west France,True,True,True,True
+CHANGE,1.58333,48.5667,1,NP,dolmen,node/1947147626,Site archéologique de Changé,197.0,France,5115.0,GIF-9014,6180.0,120.0,0,Rest of France,True,True,False,False
+Passy SablonniÔøΩre,3.305,48.111,9,P,unk,node/3438113574,,146.0,France,5000.0,LY-6362SACA17072,6090.0,35.0,0,Rest of France,False,False,False,False
+CROIX SAINT PIERRE,-2.0,47.7667,1,N,dolmen,node/4078026351,Dolmen Ouest de la Croix de Saint-Pierre,812.0,France,4980.0,GIF-8840,6070.0,80.0,0,North-west France,True,True,False,False
+Areita 1,-7.4714,41.0465,6,NP,dolmen,node/3994226718,Dólmen de Areita,4.0,Portugal,4855.0,SAC-1514,5970.0,60.0,0,Portugal,True,True,False,False
+Passy Richebourg,3.305,48.111,8,P,unk,node/3438113574,,146.0,France,4840.0,LY-6356SACA17066,5960.0,40.0,0,Rest of France,False,False,False,True
+Outeiro de Ante,-8.035278,41.19083,4,NP,dolmen,node/3994226730,Dólmen de Outeiro de Ante 3,38.0,Portugal,4800.0,GAK-10937,5920.0,130.0,0,Portugal,True,True,False,False
+Condé-sur-Ifs Bruyère-du-Hamel,-0.126701,49.043,10,P,menhir,node/2296005746,La Pierre Cornue,147.0,France,4795.0,GIF-12078,5920.0,70.0,0,North-west France,False,False,False,False
+Billown Quarry,-4.650278,54.09861,41,N,circle,node/8357701333,Billown Stone Circle,983.0,Isle of Man,4785.0,BETA-110691,5910.0,70.0,0,England and Man,False,True,False,False
+Knowth,-6.4917,53.7051,2,N,passage,way/264536965,Knowth,422.0,Ireland,4755.0,GRN-18773,5885.0,45.0,0,Ireland,True,True,False,False
+Ty Mawr,-4.6248,53.3004,5,N,unk,node/6185665852,Maen Hir Tŷ Mawr,465.0,United Kingdom,4750.0,BETA-152584,5880.0,40.0,0,Wales,False,True,False,False
+Haddenham Long Barrow,0.084314,52.36995,13,K,longb,,,,United Kingdom,4625.0,HAR-9178,5770.0,140.0,0,England and Man,True,True,False,False
+Bronneger,6.815278,52.94667,1,N,dolmen,node/583585954,Hunebed D25 Bronneger,858.0,Netherlands,4620.0,GRA-5363,5770.0,60.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Azutan,-5.1473,39.7826,4,N,unk,way/310799987,Dolmén de Azután,240.0,Spain,4605.0,LY-4578,5750.0,130.0,0,Southern and eastern Spain,False,True,False,False
+Valdemuriel 1,-3.7866,42.7122,1,NP,dolmen,node/3298032862,Dolmen de Valdemuriel 1,9.0,Spain,4520.0,GRN-14128,5670.0,110.0,0,Galicia and northern Spain,True,True,False,False
+Alcalar Monument 7,-8.58804,37.19919,3,NP,chamber,relation/10707843,Tholos de Alcalar 7,11.0,Portugal,4520.0,BETA-180981,5690.0,40.0,0,Portugal,True,True,False,False
+Le GrÔøΩe de Cojoux,-1.9739,47.7648,2,NP,rows,way/405650860,Alignements de Cojoux (B),57.0,France,4510.0,GIF-5660,5660.0,120.0,0,North-west France,False,True,False,False
+Guerande site de Sandun,-2.34,47.35,3,N,dolmen,node/4965663080,Dolmen de Sandun,222.0,France,4505.0,GIF-7703,5660.0,100.0,0,North-west France,True,True,False,False
+La-Trinité-sur-Mer – Mané Roularde,-3.02,47.58,3,N,dolmen,node/1767702911,Dolmen de Mané Rohr,986.0,France,4490.0,BETA-279940,5660.0,40.0,0,North-west France,True,True,False,False
+Holzhausen,8.37,52.89,1,P,chamber,node/5594818830,Kellersteine 2,87.0,Germany,4470.0,KNI-379,5620.0,120.0,0,"Low Countries, north Germany and Poland",True,False,False,False
+Cairon - La Pierre Tourneresse,-0.4414,49.2352,29,NP,dolmen,node/2157259729,La Pierre Tourneresse,6.0,France,4410.0,LYON-2975,5590.0,40.0,0,North-west France,True,True,False,False
+ChÔøΩ da Parada 4,-8.0076,41.2035,5,P,dolmen,node/3595930810,Anta da Aboboreira,10.0,Portugal,4375.0,ICEN-170,5530.0,300.0,0,Portugal,True,False,False,False
+Outeiro de Gregos,-8.040556,41.18777,5,NP,unk,node/3994226731,Mamoa de Outeiro de Gregos 2,77.0,Portugal,4350.0,KN-2768,5500.0,70.0,0,Portugal,False,True,False,False
+Chã da Parada,-8.00753,41.20346,2,P,dolmen,node/3595930810,Anta da Aboboreira,3.0,Portugal,4320.0,ICEN-162,5470.0,45.0,0,Portugal,True,False,False,True
+BILGROIX,-2.91667,47.55,2,N,gallery,node/1938628529,Allée couverte de Bilgroix,702.0,France,4270.0,GIF-8961,5420.0,60.0,0,North-west France,True,True,False,False
+Knowth site M,-6.4914,53.7012,9,NP,passage,way/264536965,Knowth,45.0,Ireland,4265.0,UB-7021,5398.0,38.0,0,Ireland,True,True,True,True
+La Hogue Bie,-2.0641,49.2003,9,P,passage,node/5445516318,Passage Grave,33.0,Jersey,4255.0,BETA-77360,5410.0,70.0,0,North-west France,True,False,False,False
+NECROPOLE DE LA BOIXE DOLMEN C,0.14,45.84,1,KN,dolmen,node/5503552579,Dolmen dit de la Boixe / Pierre De Sacrifice,872.0,France,4235.0,GIF-8909,5380.0,50.0,0,Rest of France,True,True,False,False
+Fuentepecina,-3.7866,42.7122,3,P,dolmen,node/3298032862,Dolmen de Valdemuriel 1,9.0,Spain,4230.0,GRN-18669,5375.0,45.0,0,Galicia and northern Spain,True,False,False,True
+Upper Largie,-5.492388,56.13691,8,N,chamber,way/246795644,Nether Largie North Cairn,829.0,United Kingdom,4220.0,AA-43013,5375.0,55.0,0,Scotland,True,True,False,False
+Whitwell Long Cairn,-1.209197,53.28549,3,K,longb,,,,United Kingdom,4205.0,OXA-4176,5380.0,90.0,0,England and Man,True,True,False,False
+LOCMARIAQUER ER GRAH,-2.95,47.5667,3,N,menhir,relation/19515438,Grand Menhir Brisé d'Er Grah,519.0,France,4195.0,GIF-7693,5370.0,70.0,0,North-west France,False,True,True,True
+Lambourn,-1.5341,51.5481,1,P,longb,way/56208942,,85.0,United Kingdom,4185.0,GX-1178,5365.0,180.0,0,England and Man,True,False,False,False
+Stonehenge,-1.826389,51.17889,34,NP,circle,way/37118074,Stonehenge,48.0,United Kingdom,4180.0,OXA-4902,5350.0,80.0,2,England and Man,False,True,False,False
+Knowth,-6.491667,53.70167,13,NP,passage,way/264536965,Knowth,46.0,Ireland,4175.0,GRN-20181,5345.0,20.0,1,Ireland,True,True,True,True
+Stannon Down St Breward,-4.6405,50.5925,15,N,circle,way/118846317,Stannon Stone Circle,715.0,United Kingdom,4170.0,GU-5153,5340.0,60.0,0,England and Man,False,True,False,False
+ÔøΩle Carn,-4.6925,48.5751,2,P,chamber,node/479847018,Cairn,42.0,France,4160.0,GIF-414,5340.0,250.0,0,North-west France,True,False,False,False
+Meninas do Crastro 2,-8.0212,41.201,1,NP,unk,node/3994226748,Dólmen das Meninas do Crasto 3,3.0,Portugal,4105.0,CSIC-659A,5260.0,60.0,0,Portugal,False,True,False,False
+Meninas do Crasto,-8.021111,41.20111,6,NP,unk,node/3994226748,Dólmen das Meninas do Crasto 3,14.0,Portugal,4100.0,CSIC-657,5260.0,50.0,0,Portugal,False,True,True,True
+Broomend of Crichie,-2.3682,57.2633,11,NP,circle,way/251170073,Broomend of Crichie Stone Circle / Henge,435.0,United Kingdom,4100.0,SUERC-13990,5260.0,35.0,0,Scotland,False,True,False,False
+Burn Ground Gloucestershire,-1.850443,51.84341,9,NP,longb,node/486819821,Burn Ground,74.0,United Kingdom,4080.0,WK-17172,5255.0,35.0,0,England and Man,True,True,False,False
+Skorba,14.3777,35.9208,6,NP,unk,way/294789291,It-Tempji ta' Skorba,22.0,Malta,4065.0,BM-142,5240.0,150.0,0,"Italy, Sicily and Malta",False,True,False,False
+DOLMEN DE CHATEAU BU,-1.95,47.8167,1,K,dolmen,,,,France,4040.0,GIF-9239,5230.0,50.0,0,North-west France,True,True,False,False
+Balfarg Riding School,-3.154757,56.21544,4,P,circle,node/4458882016,Balbirnie stone circle (original site),94.0,United Kingdom,3980.0,GU-2604,5170.0,90.0,0,Scotland,False,False,False,False
+Picoto da Vasco,-7.8089,40.9016,7,NP,dolmen,node/3994227458,Orca do Picoto do Vasco,6.0,Portugal,3970.0,CSIC-1221,5160.0,42.0,0,Portugal,True,True,False,False
+LISCUIS EN LANISCAT,-3.13333,48.2167,1,N,passage,node/4260198302,Allée couverte de Liscuis,599.0,France,3935.0,GIF-3099,5140.0,100.0,0,North-west France,True,True,False,False
+Wulfen,11.93333,51.81667,1,N,passage,node/2284773289,Großsteingrab Wulfen,371.0,Germany,3930.0,HD-19407,5129.0,35.0,0,Central Europe,True,True,False,False
+Mamoa de São Simão,-8.031672,41.19766,2,KN,dolmen,node/4807730806,Mamoa de São Simão,259.0,Portugal,3920.0,CSIC-717,5130.0,90.0,0,Portugal,True,True,False,False
+Hazleton North Gloucestershire,-1.893889,51.86806,18,N,longb,way/904576753,Hazleton long barrows,170.0,United Kingdom,3915.0,OXA-12969,5125.0,34.0,0,England and Man,True,True,False,False
+Lüdelsen 3,10.9668,52.6956,4,NP,dolmen,node/1906528909,Großsteingrab Lüdelsen 3,5.0,Germany,3910.0,KIA-35046,5125.0,35.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Carapito 1,-7.4666,40.75,2,N,dolmen,node/6039518327,Dólmen de Carapito 3,151.0,Portugal,3890.0,TO-3336,5120.0,40.0,0,Portugal,True,True,False,False
+Poulnabrone,-9.139972,53.04872,8,NP,dolmen,way/1133813321,Poulnabrone Dolmen,8.0,Ireland,3875.0,OXA-1906,5100.0,80.0,0,Ireland,True,True,False,False
+Maeshowe,-3.18824,58.9965,1,P,chamber,way/288905594,Maes Howe,47.0,United Kingdom,3875.0,SRR-791,5090.0,110.0,0,Orkney and Shetland,True,False,False,False
+Mamoa do Castelo 1,-8.3133,41.8794,7,KP,dolmen,node/3997936102,Mamoa do Mezio 6,6.0,Portugal,3870.0,CSIC-1818,5112.0,36.0,0,Portugal,True,True,False,False
+Albersdorf: LA 56: Bredenhoop,9.2909,54.1436,10,NP,chamber,node/372878381,Großsteingrab Albersdorf 4,927.0,Germany,3865.0,KIA-494871,5110.0,35.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Llandegai,-4.1065,53.2133,6,N,unk,node/11025759521,Llandegai Henge Complex North Henge,700.0,United Kingdom,3865.0,KIA-30436B,5045.0,35.0,0,Wales,False,True,False,False
+Coldrum,0.372806,51.32157,27,NP,longb,way/232198058,Coldrum Long Barrow,22.0,United Kingdom,3865.0,OXA-13740,5041.0,32.0,0,England and Man,True,True,False,False
+Orca das Castonairas,-7.755468,40.83477,12,KP,dolmen,node/4006470889,Orca das Castenairas 1,1.0,Portugal,3860.0,GRN-4924,5060.0,50.0,0,Portugal,True,True,False,False
+ChÔøΩ da Parada 3,-8.0076,41.2035,2,P,dolmen,node/3595930810,Anta da Aboboreira,10.0,Portugal,3855.0,GIF-8289,5070.0,100.0,1,Portugal,True,False,False,True
+Pencraig Hill,-2.671586,55.98239,14,NP,menhir,node/694132913,Pencraig Hill,90.0,United Kingdom,3840.0,SUERC-9039,5025.0,35.0,0,Scotland,False,True,False,False
+Gwernvale long cairn,-3.147288,51.86668,3,K,longb,,,,United Kingdom,3840.0,CAR-113,5050.0,75.0,0,Wales,True,True,False,False
+Temple Wood,-5.4981,56.1234,2,NP,circle,way/357860767,Temple Wood Stone Circle,51.0,United Kingdom,3825.0,GU-1296,5025.0,190.0,0,Scotland,False,True,False,False
+Outeiro de Gregos 2,-8.0412,41.1872,1,NP,unk,node/3994226731,Mamoa de Outeiro de Gregos 2,6.0,Portugal,3825.0,CSIC-774,5030.0,70.0,0,Portugal,False,True,True,True
+Pedra Cuberta,-8.9845,43.0895,1,NP,dolmen,node/6759506022,Pedra Cuberta,22.0,Spain,3795.0,CAMS-77923,5010.0,60.0,0,Galicia and northern Spain,True,True,False,False
+ChÔøΩ da Parada 1,-8.0076,41.2035,11,P,dolmen,node/3595930810,Anta da Aboboreira,10.0,Portugal,3790.0,CSIC-979,5010.0,35.0,0,Portugal,True,False,False,True
+Poulnabrone,-9.14,53.0487,38,NP,dolmen,way/1133813321,Poulnabrone Dolmen,6.0,Ireland,3780.0,OXA-25905,5004.0,31.0,0,Ireland,True,True,True,True
+Lameira de Cima 2,-7.348952,40.93592,3,NP,dolmen,node/3994226741,Lameira de Cima 1,36.0,Portugal,3780.0,GRN-21353,4990.0,80.0,0,Portugal,True,True,False,False
+Vale de Rodrigo 3,-8.0629,38.5026,1,NP,dolmen,way/1295743824,Vale de Rodrigo 3,3.0,Portugal,3765.0,KIA-31381,4996.0,29.0,0,Portugal,True,True,False,False
+Pedra Moura,-8.978,43.0812,1,NP,dolmen,node/6759492578,Dolmen de Pedra Moura de Monte Carnio,22.0,Spain,3765.0,CAMS-77761,4980.0,70.0,0,Galicia and northern Spain,True,True,False,False
+Monte d'Accoddi,8.4489,40.7911,5,NP,unk,way/283846642,Monte d'Accoddi,52.0,Italy,3765.0,UTC-1467,4970.0,100.0,0,Sardinia and Corsica,False,True,False,False
+Ascott-under-Wychwood,-1.8958,51.8686,4,P,longb,way/904576753,Hazleton long barrows,28.0,United Kingdom,3760.0,OXA-738,4970.0,80.0,0,England and Man,True,False,False,True
+Penywyrlod Talgarth long cairn,-3.238161,51.97599,1,K,longb,,,,United Kingdom,3760.0,HAR-674,4970.0,80.0,0,Wales,True,True,False,False
+Llandegai,-4.1055,53.212,9,N,unk,node/11025759521,Llandegai Henge Complex North Henge,850.0,United Kingdom,3755.0,NZA-26838,4985.0,40.0,0,Wales,False,True,True,True
+Lower Luggy long barrow,-3.180659,52.60862,4,K,longb,,,,United Kingdom,3750.0,BETA-206283,4980.0,40.0,0,Wales,True,True,False,False
+Meninas do Crastro 3,-8.0212,41.201,1,NP,unk,node/3994226748,Dólmen das Meninas do Crasto 3,3.0,Portugal,3745.0,CSIC-776,4960.0,70.0,0,Portugal,False,True,True,True
+Carrowmore 4,-8.5184,54.2518,2,NP,dolmen,way/1132481166,Carrowmore 5,22.0,Ireland,3740.0,UA-4468,4945.0,100.0,0,Ireland,True,True,False,False
+Alcalar Hipogeo 1 de Monte Canelas,-8.59367,37.20628,8,NP,chamber,way/606394656,Tholos de Alcalar 9,931.0,Portugal,3735.0,BETA-290365,4970.0,40.0,0,Portugal,True,True,False,False
+Lambourn Long Barrow,-1.535579,51.54857,3,KP,longb,way/56208942,,31.0,United Kingdom,3725.0,OXA-7693,4955.0,45.0,0,England and Man,True,True,False,True
+West Kennet,-1.850833,51.40861,24,NP,longb,node/370206805,West Kennet Long Barrow,28.0,United Kingdom,3725.0,GRA-23181,4950.0,50.0,0,England and Man,True,True,False,False
+Rastorf LA 6,10.2918,54.2815,3,NP,longb,node/405150964,Großsteingrab Rastorf 3,89.0,Germany,3705.0,KIA-34020,4945.0,30.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Dolmen de Menga,-4.5483,37.0241,5,KNP,dolmen,node/539468924,Dolmen de Menga,10.0,Spain,3700.0,UA-24582,4935.0,40.0,0,Southern and eastern Spain,True,True,False,False
+Vale de Rodrigo 2,-8.0598,38.4956,2,NP,dolmen,way/1295743823,Vale de Rodrigo 2,7.0,Portugal,3695.0,UA-10830,4905.0,70.0,0,Portugal,True,True,False,False
+Carrowmore 55A,-8.517,54.2491,12,NP,circle,way/292693547,Carrowmore 57,119.0,Ireland,3695.0,UA-36378,4905.0,80.0,0,Ireland,False,True,False,False
+Orca de Seixas,-7.685959,40.94616,1,KNP,dolmen,node/4006518506,Orca de Seixas,1.0,Portugal,3685.0,GRN-5734,4900.0,40.0,0,Portugal,True,True,False,False
+Mound of the Hostages,-6.61171,53.57947,62,P,passage,way/1136248491,Dumha na nGiall,15.0,Ireland,3685.0,GRA-17675,4900.0,50.0,0,Ireland,True,False,False,False
+Pipton long cairn,-3.225274,52.02754,6,K,longb,,,,United Kingdom,3685.0,OXA-14252,4906.0,33.0,0,Wales,True,True,False,False
+Valtorp 2,13.60635,58.22955,17,P,other,node/4298274485,Rössberga Hällkista,3.0,Sweden,3680.0,UA-32615,4890.0,50.0,0,"Denmark, Sweden and Norway",False,False,False,False
+Er Grah,-2.95,47.5713,1,NP,menhir,relation/19515438,Grand Menhir Brisé d'Er Grah,22.0,France,3675.0,LY-56OXA,4885.0,65.0,0,North-west France,False,True,True,True
+Parc le Breos Cwm long cairn,-4.112699,51.58833,12,KNP,longb,node/812166158,Parc le Breos,5.0,United Kingdom,3660.0,OXA-6493,4875.0,55.0,0,Wales,True,True,False,False
+Knowth,-6.4914,53.7012,38,NP,passage,way/264536965,Knowth,45.0,Ireland,3655.0,UBA-14664,4877.0,34.0,0,Ireland,True,True,True,True
+Carrowmore 3,-8.517,54.2491,13,NP,circle,way/292693547,Carrowmore 57,119.0,Ireland,3635.0,UA-36376,4855.0,60.0,0,Ireland,False,True,True,True
+Dolmen 1 of Carapito,-7.466954,40.74679,1,KNP,dolmen,relation/8894025,Núcleo dólménico do Carapito,7.0,Portugal,3635.0,GRN-5510,4850.0,40.0,0,Portugal,True,True,False,False
+Ostenwalde 1,7.5887,52.8372,4,NP,passage,node/4041519365,Ganggrab von Ostenwalde,79.0,Germany,3610.0,HV-8106,4870.0,415.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Carreg Goetan portal dolmen,-4.827222,52.01833,4,K,dolmen,,,,United Kingdom,3595.0,CAR-392,4830.0,80.0,0,Wales,True,True,False,False
+Creggandevesky,-7.001129,54.61829,2,NP,cpw,node/12974107256,Creggandevesky Court Tomb,124.0,United Kingdom,3590.0,UB-2540,4825.0,80.0,0,Ireland,True,True,False,False
+Notgrove Gloucestershire,-1.861916,51.88927,6,NP,longb,node/430039104,Notgrove Long Barrow,17.0,United Kingdom,3575.0,WK-17179,4816.0,43.0,0,England and Man,True,True,False,False
+Wayland's Smithy Ashbury,-1.5958,51.5664,23,NP,longb,way/349634594,Wayland's Smithy,70.0,United Kingdom,3575.0,OXA-14772,4787.0,34.0,0,England and Man,True,True,False,False
+Llandegai,-4.1101,53.2119,2,N,unk,node/11025759521,Llandegai Henge Complex North Henge,882.0,United Kingdom,3570.0,NZA-26689,4797.0,30.0,0,Wales,False,True,True,True
+Behy,-9.4626,54.3043,7,P,chamber,way/1263285788,,64.0,Ireland,3570.0,AA-43429,4805.0,55.0,0,Ireland,True,False,False,False
+LÔøΩdelsen 6,10.9668,52.6956,6,P,dolmen,node/1906528909,Großsteingrab Lüdelsen 3,5.0,Germany,3570.0,KIA-43282,4795.0,37.0,0,"Low Countries, north Germany and Poland",True,False,False,True
+Grundoldendorf 1,9.58655,53.47158,2,P,dolmen,node/2364376124,Hünenbett Grab I,28.0,Germany,3565.0,HV-5014,4795.0,70.0,0,"Low Countries, north Germany and Poland",True,False,False,False
+Brenig site 53,-3.5205,53.1023,4,N,circle,node/3073739616,Stone Circle - Brenig 8,981.0,United Kingdom,3565.0,HAR-1669,4800.0,90.0,1,Wales,False,True,False,False
+Outeiro de Ante 3,-8.0353,41.1912,2,NP,dolmen,node/3994226730,Dólmen de Outeiro de Ante 3,3.0,Portugal,3565.0,GIF-4856,4800.0,80.0,0,Portugal,True,True,True,True
+LA HAMELINIERE,-0.56,48.42,2,N,gallery,node/5288079771,Allée couverte de la Hamelinière,404.0,France,3555.0,LY-1659,4755.0,45.0,0,North-west France,True,True,False,False
+West Kennet,-1.8511,51.4086,2,NP,longb,node/370206805,West Kennet Long Barrow,46.0,United Kingdom,3550.0,OXA-463,4780.0,90.0,0,England and Man,True,True,True,True
+Lough Gur,-8.533278,52.51638,1,N,menhir,node/9306596496,Lough Gur Standing Stone,436.0,Ireland,3525.0,GRN-16825,4740.0,60.0,0,Ireland,False,True,False,False
+Llandegai,-4.10751,53.218,1,N,unk,node/11025759521,Llandegai Henge Complex North Henge,180.0,United Kingdom,3500.0,NPL-220,4740.0,150.0,0,Wales,False,True,True,True
+Balfarg Riding School,-3.153,56.2152,1,P,circle,node/4458882016,Balbirnie stone circle (original site),100.0,United Kingdom,3500.0,GU-2606,4720.0,70.0,0,Scotland,False,False,False,True
+Stonehenge Greater Cursus Amesbury,-1.8262,51.1789,2,NP,circle,way/37118074,Stonehenge,61.0,United Kingdom,3490.0,OXA-17953,4716.0,34.0,0,England and Man,False,True,True,True
+Rastorf LA 1,10.2917,54.2844,2,NP,dolmen,node/405150959,Großsteingrab Rastorf 1,2.0,Germany,3480.0,GRN-10346,4710.0,45.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Plas Gogerddan,-4.021691,52.43199,1,P,menhir,node/2325324258,Carreg Llwyd,57.0,United Kingdom,3480.0,CAR-994,4700.0,80.0,0,Wales,False,False,False,False
+Wayland's Smithy,-1.5958,51.5664,1,NP,longb,way/349634594,Wayland's Smithy,70.0,United Kingdom,3475.0,OXA-27626,4714.0,36.0,0,England and Man,True,True,True,True
+Tustrup,10.5127,56.4905,2,P,passage,way/619186239,,1.0,Denmark,3465.0,K-1762,4700.0,110.0,0,"Denmark, Sweden and Norway",True,False,False,False
+Calden Erdwerk,9.4,51.4,5,NP,gallery,node/9325687263,Galeriegrab Calden 1,60.0,Germany,3455.0,KN-4778,4668.0,53.0,0,Central Europe,True,True,False,False
+Wideford Hill,-3.0257,58.9876,6,N,passage,node/503390741,Wideford Hill,545.0,United Kingdom,3450.0,SUERC-4862,4645.0,40.0,0,Orkney and Shetland,True,True,False,False
+Ty Isaf long cairn,-3.191838,51.95392,7,K,longb,,,,United Kingdom,3450.0,OXA-14394,4658.0,32.0,0,Wales,True,True,False,False
+Rabuje 5,-7.42,39.093,1,NP,unk,relation/5958796,Necrópole Megalítica de Rabuje,2.0,Portugal,3450.0,BETA-191133,4650.0,50.0,0,Portugal,False,True,False,False
+DOLMEN DU BAGNOLET,3.42,44.21,4,K,dolmen,,,,France,3450.0,LYON-1562,4650.0,50.0,0,Rest of France,True,True,False,False
+Poulawack,-9.144917,53.03217,3,NP,unk,way/177161779,Poulawack Cairn,9.0,Ireland,3445.0,GRN-12622,4695.0,35.0,0,Ireland,False,True,False,False
+Calden Galeriegrab I,9.4,51.4,2,NP,gallery,node/9325687263,Galeriegrab Calden 1,60.0,Germany,3440.0,HD-17072,4605.0,32.0,0,Central Europe,True,True,True,True
+Rastorf LA 73,10.2883,54.275,1,N,longb,node/405150964,Großsteingrab Rastorf 3,679.0,Germany,3440.0,KIA-34019,4690.0,30.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+Odoorn,6.839,52.857,3,NP,dolmen,node/583587446,Hunebed D32 Odoorn,40.0,Netherlands,3435.0,GRN-13184,4630.0,60.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Lough Gur,-8.533611,52.51417,2,N,menhir,node/9306596496,Lough Gur Standing Stone,522.0,Ireland,3415.0,D-41,4690.0,240.0,0,Ireland,False,True,True,True
+Orca das Castenairas,-7.7536,40.8352,1,KN,dolmen,node/4006470889,Orca das Castenairas 1,163.0,Portugal,3405.0,GRN-4925,4610.0,50.0,0,Portugal,True,True,True,True
+Ansarve,18.1408,57.5084,10,P,other,node/2758370179,Gnisvärd skeppssättning #1,16.0,Sweden,3355.0,UA-3783,4595.0,65.0,0,"Denmark, Sweden and Norway",False,False,False,False
+Larcuste II,-2.7931,47.8051,3,NP,dolmen,node/4078086532,Cairn de Larcuste,22.0,France,3355.0,GIF-2454,4610.0,110.0,0,North-west France,True,True,False,False
+Benzingerode Totenhütte,10.8933,51.8392,6,P,menhir,node/845977976,Menhir von Derenburg,92.0,Germany,3350.0,ERL-5558,4593.0,65.0,0,Central Europe,False,False,False,False
+West Kennet,-1.85,51.41,6,N,longb,node/370206805,West Kennet Long Barrow,154.0,United Kingdom,3345.0,OXA-13243,4583.0,45.0,0,England and Man,True,True,True,True
+Dolmen de Viera,-4.5484,37.0241,3,KNP,dolmen,node/539468884,Dolmen de Viera,83.0,Spain,3245.0,GRN-16067,4550.0,140.0,0,Southern and eastern Spain,True,True,False,False
+Isbister South Ronaldsay,-2.9168,58.7448,30,NP,chamber,way/779336173,Tomb of the Eagles/Isbister Chambered Tomb,20.0,United Kingdom,3230.0,MAMS-14924,4483.0,19.0,0,Orkney and Shetland,True,True,False,False
+Quoyness,-2.568068,59.2251,4,NP,chamber,node/5509245778,Quoyness Chambered Cairn,54.0,United Kingdom,3225.0,MAMS-14921,4487.0,18.0,0,Orkney and Shetland,True,True,False,False
+Newgrange,-6.475031,53.69437,4,NP,passage,way/25696157,Newgrange,86.0,Ireland,3225.0,UB-361,4535.0,105.0,0,Ireland,True,True,False,False
+Annaghmare,-6.6172,54.1018,1,P,cpw,way/1124655659,The Black Castle Chambered Grave,29.0,United Kingdom,3220.0,UB-6741,4556.0,35.0,0,Ireland,True,False,False,False
+DOLMEN DE ST EUGENE,2.53,43.3,6,KN,dolmen,node/6906649416,Allée couverte de Saint-Eugène,472.0,France,3215.0,LY-2205,4485.0,30.0,0,Rest of France,True,True,False,False
+Isbister,-2.91586,58.7453,10,NP,chamber,way/779336173,Tomb of the Eagles/Isbister Chambered Tomb,76.0,United Kingdom,3215.0,SUERC-68724,4471.0,29.0,0,Orkney and Shetland,True,True,True,True
+Karleby Log B,13.6459,58.1551,1,N,passage,node/4298235242,Karleby 60:1,455.0,Sweden,3215.0,UA-13401,4530.0,60.0,0,"Denmark, Sweden and Norway",True,True,False,False
+Achmore Lewis,-6.5644,58.1698,2,NP,circle,node/14024295808,Achmore Stone Circle,59.0,United Kingdom,3215.0,GU-7321,4530.0,60.0,0,Scotland,False,True,False,False
+Dolmen de Mailleton,2.4113,48.2663,1,KNP,dolmen,node/5043361266,Dolmen de Mailleton,14.0,France,3210.0,LY-9123,4520.0,45.0,0,Rest of France,True,True,False,False
+DOLMEN DES AGUALS,1.88,44.53,4,K,dolmen,,,,France,3210.0,LYON-1559,4500.0,35.0,0,Rest of France,True,True,False,False
+Great Bernera 'tursachan' Barraglom,-6.8293,58.2054,1,NP,circle,way/1013218542,Tursachan,16.0,United Kingdom,3210.0,GU-2577,4510.0,50.0,0,Scotland,False,True,False,False
+Wideford Hill,-3.0302,58.992,3,NP,passage,node/503390741,Wideford Hill,9.0,United Kingdom,3210.0,SUERC-4868,4495.0,35.0,0,Orkney and Shetland,True,True,True,True
+Stonehenge Amesbury,-1.8262,51.1789,58,NP,circle,way/37118074,Stonehenge,61.0,United Kingdom,3210.0,OXA-18659,4534.0,35.0,2,England and Man,False,True,True,True
+Carrowkeel,-8.3778,54.0533,2,P,passage,way/541508808,Cairn L,86.0,Ireland,3210.0,SUERC-53150,4499.0,29.0,0,Ireland,True,False,False,False
+Rego da Murta 1,-8.3695,39.7616,5,NP,dolmen,node/3994018770,Anta 1 de Rego da Murta,9.0,Portugal,3210.0,BETA-190001,4520.0,40.0,0,Portugal,True,True,False,False
+Knowth,-6.4917,53.7017,7,NP,passage,way/264536965,Knowth,47.0,Ireland,3205.0,UBA-14783,4535.0,30.0,0,Ireland,True,True,True,True
+Newgrange,-6.47555,53.6948,23,NP,passage,way/25696157,Newgrange,41.0,Ireland,3205.0,GRN-5462,4500.0,45.0,0,Ireland,True,True,True,True
+Calden Galeriegrab II,9.4,51.4,2,NP,gallery,node/9325687263,Galeriegrab Calden 1,60.0,Germany,3205.0,HD-17023,4516.0,26.0,0,Central Europe,True,True,True,True
+Loon D 15,6.6125,53.0225,1,NP,dolmen,node/583582366,Hunebed D15 Loon,39.0,Netherlands,3185.0,GRA-15641,4480.0,60.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Machrie Moor Arran,-5.3109,55.5404,4,NP,circle,node/2318451980,Machrie Moor Stone Circle 1,10.0,United Kingdom,3180.0,GU-2316,4470.0,50.0,0,Scotland,False,True,False,False
+Llandegai,-4.108,53.2187,1,NP,unk,node/11025759521,Llandegai Henge Complex North Henge,122.0,United Kingdom,3175.0,NPL-224,4480.0,145.0,0,Wales,False,True,True,True
+Rössberga (Valtorp 2),13.6063,58.2295,1,NP,other,node/4298274485,Rössberga Hällkista,9.0,Sweden,3165.0,UA-32619,4455.0,45.0,0,"Denmark, Sweden and Norway",False,True,False,True
+Gavrinis,-2.8983,47.5718,3,NP,chamber,node/536833391,Cairn de Gavrinis,25.0,France,3165.0,GIF-6294,4470.0,80.0,0,North-west France,True,True,False,False
+Trigache 4,-9.2185,38.8067,1,P,dolmen,node/8860592482,Anta das Pedras Grandes,12.0,Portugal,3155.0,BETA-228583,4450.0,40.0,0,Portugal,True,False,False,False
+Liscuis II,-3.1333,48.2167,1,N,passage,node/4260198302,Allée couverte de Liscuis,598.0,France,3145.0,GIF-3944,4450.0,110.0,0,North-west France,True,True,True,True
+Tustrup,10.51275,56.4905,2,P,passage,way/619186239,,2.0,Denmark,3135.0,K-727,4440.0,120.0,0,"Denmark, Sweden and Norway",True,False,False,True
+Gavres Goerem Mesolithic Burial,-3.35563,47.6909,1,N,dolmen,way/148223639,Tumulus du Goërem,760.0,France,3120.0,GIF-1148,4430.0,140.0,0,North-west France,True,True,False,False
+Dolmen de L'Ubac,5.24,43.86,4,K,dolmen,,,,France,3110.0,LY-11492,4440.0,45.0,2,Rest of France,True,True,False,False
+Kruckow,13.23333,53.9,3,N,chamber,node/8287711609,Großsteingrab Kruckow 3,943.0,Germany,3110.0,ETH-4122,4435.0,65.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Durrington Walls Amesbury,-1.8263,51.1789,58,P,circle,way/37118074,Stonehenge,54.0,United Kingdom,3085.0,NPL-191,4400.0,150.0,0,England and Man,False,False,False,True
+Balbirnie,-3.15945,56.216,3,N,circle,node/4458882016,Balbirnie stone circle (original site),355.0,United Kingdom,3080.0,GU-1670,4425.0,50.0,0,Scotland,False,True,False,True
+Falkäping stad 3,13.5781,58.1698,1,P,passage,node/2928142731,Hjelmarsrör Gånggrift,5.0,Sweden,3080.0,AAR-10233,4428.0,45.0,0,"Denmark, Sweden and Norway",True,False,False,False
+Praia das Maçãs,-9.467402,38.82599,4,NP,chamber,node/4048130435,Monumento pré-histórico da Praia das Maçãs,101.0,Portugal,3075.0,OXA-5509,4410.0,75.0,0,Portugal,True,True,False,False
+Angelslo,6.926455,52.7809,9,N,dolmen,way/735174729,Hunebed D46 Emmen - Angelslo,698.0,Netherlands,3075.0,GRN-4200,4415.0,65.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Santa Margarida 2,-7.4299,38.4505,1,NP,menhir,node/6149599583,Menir de Santa Margarida,12.0,Portugal,3065.0,BETA-153911,4410.0,60.0,0,Portugal,False,True,False,False
+Isbister South Ronaldsay,-2.9153,58.7444,1,NP,chamber,way/779336173,Tomb of the Eagles/Isbister Chambered Tomb,115.0,United Kingdom,3065.0,OXA-25627,4425.0,36.0,0,Orkney and Shetland,True,True,True,True
+Poulnabrone,-9.140296,53.04725,1,N,dolmen,way/1133813321,Poulnabrone Dolmen,162.0,Ireland,3060.0,OXA-1913,4390.0,90.0,0,Ireland,True,True,True,True
+Calden,9.403706,51.40488,1,N,gallery,node/9325687263,Galeriegrab Calden 1,660.0,Germany,3035.0,HD-16991,4412.0,34.0,0,Central Europe,True,True,True,True
+Balbirnie,-3.1544,56.2145,17,NP,circle,node/4458882016,Balbirnie stone circle (original site),18.0,United Kingdom,3020.0,SUERC-24166,4405.0,30.0,0,Scotland,False,True,True,True
+Rego da Murta 1,-8.3694,39.7617,1,NP,dolmen,node/3994018770,Anta 1 de Rego da Murta,8.0,Portugal,3020.0,BETA-190003,4400.0,40.0,0,Portugal,True,True,True,True
+Balfarg Riding School,-3.1546,56.2154,7,P,circle,node/4458882016,Balbirnie stone circle (original site),87.0,United Kingdom,3015.0,GU-1904,4385.0,55.0,0,Scotland,False,False,False,True
+Callanish Lewis,-6.7451,58.1976,15,NP,circle,way/1013218548,Callanish XIX,646.0,United Kingdom,3010.0,AA-24965,4385.0,50.0,0,Scotland,False,True,False,False
+MEGALITHE DU CHATEAU,-0.56,47.47,5,K,unk,,,,France,2995.0,LY-2430,4375.0,45.0,0,North-west France,False,True,False,False
+Jouques dolmen des Cudieres,5.63955,43.6366,2,K,dolmen,,,,France,2975.0,LY-5058,4325.0,90.0,0,Rest of France,True,True,False,False
+Stones of Stenness Orkney,-3.206944,58.99444,1,NP,circle,way/782724929,Stones of Stenness,95.0,United Kingdom,2975.0,OXA-9904,4360.0,40.0,0,Orkney and Shetland,False,True,False,False
+Trigache 2,-9.2186,38.8066,1,P,dolmen,node/8860592482,Anta das Pedras Grandes,12.0,Portugal,2965.0,BETA-239755,4340.0,40.0,0,Portugal,True,False,False,True
+Stones of Stenness Orkney,-3.2083,58.9942,9,NP,circle,way/782724929,Stones of Stenness,19.0,United Kingdom,2965.0,OXA-16484,4346.0,39.0,0,Orkney and Shetland,False,True,True,True
+Boroughbridge,-1.4048,54.0929,2,P,menhir,node/1656310237,Devil's Arrows,81.0,United Kingdom,2960.0,RCD-1597,4314.0,87.0,0,England and Man,False,False,False,False
+Karleby 194,13.6425,58.1522,1,N,passage,node/4298235242,Karleby 60:1,545.0,Sweden,2960.0,LU-6640,4330.0,50.0,0,"Denmark, Sweden and Norway",True,True,True,True
+Alfriston,0.142222,50.81167,1,P,longb,node/9129813518,Long Burgh long barrow,135.0,United Kingdom,2955.0,HAR-940,4310.0,110.0,0,England and Man,True,False,False,False
+Bradbury Lines Hereford,-2.7158,52.04,5,P,circle,node/562703448,Staddlestone Circle,74.0,United Kingdom,2955.0,WK-16867,4336.0,36.0,0,Wales,False,False,False,False
+Ness of Brodgar,-3.215,58.9971,5,NP,menhir,node/1293208751,Brodgar Farm Standing Stones,71.0,United Kingdom,2940.0,SUERC-6764,4320.0,40.0,0,Orkney and Shetland,False,True,False,False
+Voils Le Fort Cazarils,3.71,43.76,4,N,chamber,node/4637871175,Tombe ovale de Cazarils C,437.0,France,2930.0,MC-2409,4300.0,80.0,0,Rest of France,True,True,False,False
+Fourknocks,-6.32543,53.5955,3,NP,passage,way/286946697,Fourknocks Megalithic Passage Tomb,143.0,Ireland,2920.0,GRN-11873,4305.0,45.0,0,Ireland,True,True,False,False
+Olival da Pega 2b,-7.3991,38.45157,3,NP,dolmen,node/3994189752,Anta 2 do Olival da Pêga,21.0,Portugal,2915.0,ICEN-955,4290.0,100.0,0,Portugal,True,True,False,False
+Valencina de la Concepción (Plan Parcial Matarrubilla),-6.071184,37.41149,18,N,dolmen,node/1402233437,Dólmen de Matarrubilla,678.0,Spain,2915.0,UA-36025,4295.0,55.0,0,Southern and eastern Spain,True,True,False,False
+Rego da Murta 2,-8.3694,39.7617,3,NP,dolmen,node/3994018770,Anta 1 de Rego da Murta,8.0,Portugal,2905.0,BETA-190004,4290.0,40.0,0,Portugal,True,True,True,True
+Anta 3 de Santa Margarida,-7.440833,38.43639,11,K,dolmen,,,,Portugal,2905.0,BETA-176897,4290.0,40.0,0,Portugal,True,True,False,False
+Liepen 1,12.7101,53.66668,2,NP,other,node/10911871293,Steinkiste Liepen-Basedow 1,30.0,Germany,2900.0,BLN-3952,4280.0,70.0,0,"Low Countries, north Germany and Poland",False,True,False,False
+Quoyness,-2.5683,59.2254,1,NP,chamber,node/5509245778,Quoyness Chambered Cairn,18.0,United Kingdom,2885.0,Q-11480,4265.0,50.0,0,Orkney and Shetland,True,True,True,True
+Niedertiefenbach,8.133333,50.43333,3,N,gallery,node/13929006567,Galeriegrab Niedertiefenbach,644.0,Germany,2860.0,KN-2773,4250.0,50.0,0,Central Europe,True,True,False,False
+Avebury,-1.8519,51.4275,6,NP,circle,relation/8497688,Avebury Stone Circle,96.0,United Kingdom,2860.0,HAR-9695,4260.0,80.0,0,England and Man,False,True,False,False
+Povoado do Escoural,-8.136711,38.5434,4,N,chamber,node/4807730782,Tholos do Escoural,437.0,Portugal,2860.0,ICEN-609,4260.0,90.0,0,Portugal,True,True,False,False
+Coureleiros 4,-7.4719,39.4449,1,NP,dolmen,node/3994147243,Anta 4 dos Coureleiros,6.0,Portugal,2830.0,ICEN-976,4240.0,150.0,0,Portugal,True,True,False,False
+Weris,5.531133,50.32641,2,N,passage,way/245376602,Dolmen nord Wéris,991.0,Belgium,2800.0,OXA-6457,4240.0,65.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Angelslo,6.930013,52.77966,4,N,dolmen,way/735174884,Hunebed D47 Emmen - Angelslo,546.0,Netherlands,2790.0,GRA-16021,4230.0,60.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Angelslo,6.929915,52.77961,1,N,dolmen,way/735174884,Hunebed D47 Emmen - Angelslo,554.0,Netherlands,2785.0,GRA-13598,4220.0,50.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+Callanish Lewis,-6.7388,58.2133,1,N,circle,way/1013218545,Callanish XII,330.0,United Kingdom,2785.0,OXA-9931,4225.0,85.0,0,Scotland,False,True,False,False
+Upper Largie,-5.491,56.1373,17,N,chamber,way/246795644,Nether Largie North Cairn,875.0,United Kingdom,2780.0,AA-43007,4205.0,40.0,0,Scotland,True,True,True,True
+Llandegai henge B,-4.1088,53.2183,10,N,unk,node/11025759521,Llandegai Henge Complex North Henge,190.0,United Kingdom,2780.0,GRN-26827,4210.0,50.0,0,Wales,False,True,True,True
+Orwell,-3.3734,56.2238,1,NP,menhir,node/7433572790,Orwell standing stones,0.0,United Kingdom,2770.0,SUERC-18309,4180.0,35.0,0,Scotland,False,True,False,False
+Estria,-9.2674,38.7696,2,NP,dolmen,way/462416297,Anta da Estria,10.0,Portugal,2760.0,BETA-208950,4180.0,50.0,0,Portugal,True,True,False,False
+Stonehenge Amesbury,-1.8261,51.1794,10,NP,circle,way/37118074,Stonehenge,93.0,United Kingdom,2760.0,OXAV-223246,4169.0,31.0,0,England and Man,False,True,True,True
+Annen-Holtkampen,6.714534,53.05352,1,N,dolmen,node/583581765,Hunebed D9 Annen,894.0,Netherlands,2760.0,GRN-11918,4165.0,30.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Duos Nuraghes,8.8082,40.2211,13,KNP,tower,way/318950326,Duos Nuraghes,59.0,Italy,2755.0,L-14774,4180.0,320.0,0,Sardinia and Corsica,False,True,False,False
+Eext Bergakkers,6.734722,53.0175,4,N,dolmen,node/262878221,Hunebed D13 Eext,856.0,Netherlands,2750.0,GRN-11921,4170.0,55.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Casainhos,-9.2166,38.8858,1,P,dolmen,node/6340142619,Anta de Carcavelos,4.0,Portugal,2740.0,BETA-225168,4150.0,40.0,0,Portugal,True,False,False,False
+Eext,6.734722,53.0175,1,N,dolmen,node/262878221,Hunebed D13 Eext,856.0,Netherlands,2740.0,GRN-6727,4145.0,30.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+Reguers de Seró,1.119656,41.8849,1,NP,unk,node/6052836380,Jaciment arqueològic de Reguers de Seró,0.0,Spain,2740.0,BETA-230406,4150.0,40.0,0,Southern and eastern Spain,False,True,False,False
+Maes Howe,-3.1871,58.9973,6,NP,chamber,way/288905594,Maes Howe,135.0,United Kingdom,2720.0,Q-1482,4135.0,65.0,0,Orkney and Shetland,True,True,False,True
+Cefn Caer Euni,-3.49771,52.9566,1,N,circle,way/1035849420,Caer Euni Stone Circles,230.0,United Kingdom,2710.0,CAR-600,4130.0,70.0,0,Wales,False,True,False,False
+Agualva,-9.28693,38.77345,1,NP,dolmen,node/2295722731,Anta de Agualva,2.0,Portugal,2685.0,BETA-239754,4110.0,40.0,0,Portugal,True,True,False,False
+Klein Zastrow,13.2926,54.02234,1,N,dolmen,node/8282085019,Großsteingrab Groß Zastrow 1,939.0,Germany,2680.0,HD-15772,4106.0,37.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Stonehenge Cursus,-1.826389,51.17889,1,NP,circle,way/37118074,Stonehenge,48.0,United Kingdom,2675.0,OXA-1403,4100.0,90.0,0,England and Man,False,True,True,True
+Lohne Züschen I,9.233333,51.16667,1,N,gallery,way/122009359,Steinkammergrab von Züschen,942.0,Germany,2665.0,HD-16972,4105.0,26.0,0,Central Europe,True,True,False,False
+Geroid Island Lough Gur,-8.5304,52.5196,2,N,menhir,node/9306596496,Lough Gur Standing Stone,682.0,Ireland,2645.0,D-39,4090.0,140.0,0,Ireland,False,True,True,True
+Llandegai cursus,-4.1067,53.2178,1,N,unk,node/11025759521,Llandegai Henge Complex North Henge,198.0,United Kingdom,2625.0,GRN-26828,4080.0,35.0,0,Wales,False,True,True,True
+Pedra Escorregadia,-8.9187,37.0704,2,NP,menhir,node/3999426654,Menir Pedra Escorregadia 2,1.0,Portugal,2615.0,ICEN-844,4060.0,70.0,0,Portugal,False,True,False,False
+KyndelÔøΩse,11.855,55.703,1,P,passage,node/5499680430,Møllehøj,47.0,Denmark,2605.0,OXA-28296,4071.0,27.0,0,"Denmark, Sweden and Norway",True,False,False,False
+De Eese,6.1261,52.8494,2,N,passage,node/9047419525,O1 De Eese,605.0,Netherlands,2600.0,GRN-6127,4055.0,55.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+West Kennet 2,-1.851,51.4086,2,NP,longb,node/370206805,West Kennet Long Barrow,39.0,United Kingdom,2600.0,CAR-1295,4050.0,70.0,0,England and Man,True,True,True,True
+Saint Cezaire dolmen du Prignon,6.7986,43.6507,1,K,dolmen,,,,France,2590.0,GIF-2869,4040.0,110.0,0,Rest of France,True,True,False,False
+Son Ferrandell-Oleza-OS,2.590572,39.70233,37,N,unk,relation/7199715,"Zona arqueològica de Son Ferrandell, Son Olesa, the Maze, i el santuari de Son Mas",690.0,Spain,2575.0,BM-1843R,4030.0,110.0,0,Balearic Islands,False,True,False,False
+Lady Glassary Wood Car Park Kilmartin,-5.4928,56.1217,1,P,menhir,way/502917537,,147.0,United Kingdom,2560.0,GU-7865,4030.0,60.0,0,Scotland,False,False,False,False
+Nuraghe Noeddos,8.6243,40.4344,7,K,tower,,,,Italy,2555.0,Q-3069,4030.0,50.0,0,Sardinia and Corsica,False,True,False,False
+Devil's Quoits,-1.40471,51.739,3,N,circle,relation/12555859,Devil's Quoits,190.0,United Kingdom,2540.0,HAR-1887,4010.0,120.0,0,England and Man,False,True,False,False
+Cuween Hill,-3.1083,58.9973,4,NP,passage,node/503420302,Cuween Hill,10.0,United Kingdom,2535.0,SUERC-4849,4025.0,40.0,0,Orkney and Shetland,True,True,False,False
+Llandegai circle D,-4.1103,53.2191,1,N,unk,node/11025759521,Llandegai Henge Complex North Henge,233.0,United Kingdom,2535.0,GRN-26829,4020.0,40.0,0,Wales,False,True,True,True
+Eexterhalte,6.730485,53.00187,1,NP,dolmen,node/583582365,Hunebed D14 Eexterhalte,20.0,Netherlands,2530.0,GRA-12384,4005.0,60.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Nebel Langbett 212,8.319318,54.6668,1,KNP,longb,node/1335399333,Hünenbett von Nebel,77.0,Germany,2525.0,KIA-17089,4005.0,28.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Tituaria,-9.208,38.94179,1,NP,chamber,node/3886402510,Tholos da Tituaria,9.0,Portugal,2520.0,OXA-5446,3995.0,65.0,0,Portugal,True,True,False,False
+Woodhenge Durrington Walls Amesbury,-1.8263,51.1789,1,P,circle,way/37118074,Stonehenge,54.0,United Kingdom,2515.0,SUERC-32161,3980.0,30.0,0,England and Man,False,False,False,True
+Tomnaverie,-2.8496,57.1195,18,NP,circle,way/555750915,Tomnaverie Stone Circle,22.0,United Kingdom,2510.0,AA-49284,3985.0,45.0,0,Scotland,False,True,False,False
+Demandolx Dolmen de Vieilleville,6.5794,43.8696,1,K,dolmen,,,,France,2495.0,LY-3023,3980.0,120.0,0,Rest of France,True,True,False,False
+Villard,6.369,44.476,3,NP,dolmen,node/2313355124,Dolmen de Villard,77.0,France,2495.0,LY-3257,3980.0,120.0,0,Rest of France,True,True,False,False
+Cabasse dolmen de la Bouissiere,6.2306,43.4282,1,K,dolmen,,,,France,2485.0,GIF-57,3975.0,130.0,0,Rest of France,True,True,False,False
+Voils en Laval Cambous,3.73,43.76,1,N,dolmen,node/2652519182,Dolmen de Cambous,628.0,France,2480.0,MC-719,3970.0,90.0,0,Rest of France,True,True,False,False
+West Kennet 1,-1.851,51.4086,5,NP,longb,node/370206805,West Kennet Long Barrow,39.0,United Kingdom,2460.0,CAR-1293,3960.0,70.0,0,England and Man,True,True,True,True
+Midlaren,6.677778,53.11,1,N,dolmen,node/31232793,Hunebed D3 Midlaren,482.0,Netherlands,2460.0,GRN-4154,3960.0,70.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Emmen-Angelslo,6.928727,52.78045,1,N,dolmen,way/735174729,Hunebed D46 Emmen - Angelslo,598.0,Netherlands,2425.0,GRA-13614,3940.0,50.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+Eext Galgwandenveen,6.734722,53.0175,2,N,dolmen,node/262878221,Hunebed D13 Eext,856.0,Netherlands,2425.0,GRN-6635,3940.0,40.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+West Kennet Long Barrow,-1.85111,51.4086,2,KNP,longb,node/370206805,West Kennet Long Barrow,47.0,United Kingdom,2415.0,OXA-13202,3934.0,36.0,0,England and Man,True,True,True,True
+Costa de Can Martorell,2.415224,41.59602,4,N,dolmen,node/7660452362,Menhir de la Costa de Can Martorell,236.0,Spain,2395.0,UBAR-696,3920.0,80.0,0,Southern and eastern Spain,True,True,False,False
+Durrington site 70 Amesbury,-1.8263,51.1789,1,P,circle,way/37118074,Stonehenge,54.0,United Kingdom,2390.0,SUERC-32156,3905.0,30.0,0,England and Man,False,False,False,True
+Aix en Provence dolmen de Saint Marc,5.52,43.55,1,K,dolmen,,,,France,2385.0,GIF-1613,3907.0,140.0,0,Rest of France,True,True,False,False
+The dolmen of Villard,6.3691,44.4767,2,KNP,dolmen,node/2313355124,Dolmen de Villard,1.0,France,2380.0,LY-9995,3895.0,35.0,0,Rest of France,True,True,True,True
+Anta 2 dos Cebolinhos,-7.483232,38.39244,2,K,dolmen,,,,Portugal,2380.0,BETA-176899,3900.0,40.0,0,Portugal,True,True,False,False
+Machrie North Arran,-5.3109,55.5404,2,NP,circle,node/2318451980,Machrie Moor Stone Circle 1,10.0,United Kingdom,2375.0,GU-1565,3905.0,100.0,0,Scotland,False,True,True,True
+Gasse Høje,8.80156,55.16089,1,P,unk,node/2290034731,,76.0,Denmark,2360.0,K-1138,3890.0,100.0,0,"Denmark, Sweden and Norway",False,False,False,False
+Sanctuary,-1.8313,51.4111,1,P,circle,way/189639030,,7.0,United Kingdom,2360.0,SUERC-26186,3875.0,30.0,0,England and Man,False,False,False,False
+Eext Schaapdijksweg,6.734722,53.0175,2,N,dolmen,node/262878221,Hunebed D13 Eext,856.0,Netherlands,2355.0,GRN-939,3885.0,65.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+Harristown,-7.0072,52.1795,2,N,passage,node/5531263230,Harristown Passage Tomb,624.0,Ireland,2330.0,GRN-11032,3860.0,60.0,0,Ireland,True,True,False,False
+Åttagården,13.57687,58.16757,1,NP,passage,node/2928142500,Åttagården,5.0,Sweden,2330.0,ST-5149,3865.0,70.0,0,"Denmark, Sweden and Norway",True,True,False,False
+Wilsford,-1.8326,51.1708,2,P,longb,way/976089652,,78.0,United Kingdom,2325.0,SUERC-31859,3855.0,30.0,0,England and Man,True,False,False,False
+West Kennet Avenue,-1.8494,51.4238,1,P,menhir,way/241020429,,37.0,United Kingdom,2325.0,SUERC-26158,3855.0,30.0,0,England and Man,False,False,False,False
+Presles La Pierre Plate,2.26231,49.109,1,NP,dolmen,node/4492961236,Dolmen de la Pierre-Plate situé dans la forêt de l'Isle-Adam,16.0,France,2320.0,GIF-5839,3860.0,90.0,0,Rest of France,True,True,False,False
+Karleby,13.6386,58.1497,1,N,passage,node/4298214666,Karleby 35:1,740.0,Sweden,2305.0,UA-7248,3845.0,65.0,0,"Denmark, Sweden and Norway",True,True,False,False
+Son Ferrandell-Oleza-WOS,2.590572,39.70233,21,N,unk,relation/7199715,"Zona arqueològica de Son Ferrandell, Son Olesa, the Maze, i el santuari de Son Mas",690.0,Spain,2300.0,CAMS-7072,3840.0,70.0,0,Balearic Islands,False,True,True,True
+Machrie Moor Arran,-5.3107,55.5406,5,NP,circle,node/2318451985,Machrie Moor Stone Circle 11,16.0,United Kingdom,2295.0,GU-2322,3840.0,110.0,0,Scotland,False,True,False,False
+Joaninha,-7.5141,39.6535,1,NP,dolmen,node/3301972594,Dolmen Joaninha,46.0,Spain,2295.0,SAC-1381,3840.0,170.0,0,Southern and eastern Spain,True,True,False,False
+Lough Gur,-8.526263,52.51711,8,NP,gallery,node/7296600397,Lough Gur Wedge tomb,552.0,Ireland,2285.0,OXA-3274,3830.0,80.0,0,Ireland,True,True,False,False
+Poulawack,-9.145113,53.03128,6,NP,unk,way/177161779,Poulawack Cairn,96.0,Ireland,2280.0,OXA-3260,3830.0,90.0,0,Ireland,False,True,True,True
+Le Champ-Grosset,-2.692155,48.42175,1,NP,dolmen,node/3689980738,Allé couverte du Champ Grosset,37.0,France,2270.0,GIF-283,3820.0,200.0,0,North-west France,True,True,False,False
+Porth Mellon St Mary's Isles of Scilly,-6.3067,49.9178,1,P,unk,node/10629915059,,85.0,United Kingdom,2255.0,GU-5392,3810.0,80.0,0,England and Man,False,False,False,False
+Klein Upahl,12.03999,53.70387,1,NP,dolmen,node/597671073,Großsteingrab Klein Upahl,81.0,Germany,2255.0,BLN-1097,3810.0,106.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Altanagh,-6.9398,54.7003,1,P,unk,relation/10789839,Beaghmore,69.0,United Kingdom,2255.0,GRN-1447,3810.0,120.0,0,Ireland,False,False,False,False
+Stonehenge,-1.8262,51.1788,1,NP,circle,way/37118074,Stonehenge,61.0,United Kingdom,2245.0,C-602,3798.0,275.0,0,England and Man,False,True,True,True
+Avebury 1985/86,-1.853306,51.42916,1,NP,circle,relation/8497688,Avebury Stone Circle,219.0,United Kingdom,2240.0,OXA-1221,3800.0,160.0,0,England and Man,False,True,True,True
+Schipborg,6.685833,53.06,1,NP,dolmen,node/583581760,Hunebed D7 Boswachterij Schipborg,141.0,Netherlands,2210.0,GRN-2445,3780.0,60.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Labbacallee B,-8.336313,52.1679,1,N,passage,node/2806966323,Labbacallee Wedge Tomb,712.0,Ireland,2210.0,OXA-2759,3780.0,70.0,0,Ireland,True,True,False,False
+Nuraghes,8.932871,40.10768,2,KP,tower,node/12602315702,"Nuraghe Tipoi, Orroli",11.0,Italy,2205.0,GIF-243,3770.0,250.0,0,Sardinia and Corsica,False,True,False,False
+Eext Ketenberg,6.734722,53.0175,2,N,dolmen,node/262878221,Hunebed D13 Eext,856.0,Netherlands,2200.0,GRN-1676,3775.0,55.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+Eext Kerkweg,6.734722,53.0175,2,N,dolmen,node/262878221,Hunebed D13 Eext,856.0,Netherlands,2170.0,GRN-6340,3760.0,35.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+Biniai Nou,4.212388,39.90581,9,N,unk,node/4799240225,Biniai Nou hypogeums,248.0,Spain,2150.0,UTC-8949,3745.0,40.0,0,Balearic Islands,False,True,False,False
+Alcalar Monument 9,-8.587841,37.19938,1,NP,chamber,way/606394656,Tholos de Alcalar 9,6.0,Portugal,2130.0,BETA-316624,3730.0,30.0,0,Portugal,True,True,True,True
+Stonehenge,-1.8262,51.1789,1,NP,circle,way/37118074,Stonehenge,61.0,United Kingdom,2120.0,HAR-2013,3720.0,70.0,0,England and Man,False,True,True,True
+Lorgues dolmen de Roque d'Aille,6.36156,43.4932,1,K,dolmen,,,,France,2110.0,MC-720,3710.0,90.0,0,Rest of France,True,True,False,False
+Anta da Cabeçuda,-7.35722,39.47333,1,KNP,dolmen,node/4004994709,Anta da Cabeçuda,38.0,Portugal,2110.0,ICEN-979,3720.0,50.0,0,Portugal,True,True,False,False
+West Overton,-1.8296,51.412,2,P,unk,way/1125397109,,113.0,United Kingdom,2100.0,OXAV-222846,3718.0,28.0,0,England and Man,False,False,False,False
+Duddo,-2.112,55.6868,4,NP,circle,node/8297199842,Duddo Five Stones,4.0,United Kingdom,2090.0,SUERC-22557,3710.0,30.0,0,Scotland,False,True,False,False
+Wilsford Down,-1.8526,51.1698,1,P,longb,node/445363162,,9.0,United Kingdom,2090.0,SUERC-31871,3705.0,30.0,0,England and Man,True,False,False,False
+Old Rayne,-2.5336,57.3412,1,NP,circle,way/1195916306,Old Rayne stone circle,22.0,United Kingdom,2080.0,GRA-23982,3690.0,45.0,0,Scotland,False,True,False,False
+Alderley Edge,-2.21,53.297,1,P,circle,node/540354546,Druids' Circle,109.0,United Kingdom,2080.0,BETA-115608,3690.0,70.0,0,England and Man,False,False,False,False
+Liscuis III,-3.1333,48.2167,2,N,passage,node/4260198302,Allée couverte de Liscuis,598.0,France,2070.0,GIF-4075,3680.0,110.0,0,North-west France,True,True,True,True
+Shaugh Moor,-4.03855,50.4529,8,P,circle,way/1054488748,,70.0,United Kingdom,2065.0,HAR-2669,3680.0,70.0,0,England and Man,False,False,False,False
+Stonehenge,-1.8262,51.17888,1,NP,circle,way/37118074,Stonehenge,61.0,United Kingdom,2060.0,BM-46,3670.0,150.0,0,England and Man,False,True,True,True
+Altar Megalith Tomb,-9.639823,51.5198,1,KN,cpw,way/1141427128,Altar Wedge Tomb,736.0,Ireland,2055.0,OXA-3289,3670.0,80.0,0,Ireland,True,True,False,False
+Moel Goedog Circle 1,-4.0666,52.871,6,NP,unk,node/8986769512,Moel Goedog West Ring Cairn 1,61.0,United Kingdom,2010.0,CAR-165,3640.0,70.0,0,Wales,False,True,False,False
+Drumanone,-8.3638,53.971,1,N,dolmen,node/2968005834,Drumanone Dolmen,623.0,Ireland,2005.0,UB-6696,3639.0,37.0,0,Ireland,True,True,False,False
+Brenig site 44,-3.5199,53.1023,7,N,circle,node/3073739616,Stone Circle - Brenig 8,961.0,United Kingdom,2000.0,HAR-501,3630.0,100.0,0,Wales,False,True,True,True
+Labbacallee C,-8.336313,52.1679,1,N,passage,node/2806966323,Labbacallee Wedge Tomb,712.0,Ireland,2000.0,OXA-2760,3630.0,70.0,0,Ireland,True,True,True,True
+Tara,-6.6117,53.5795,1,P,passage,way/1136248491,Dumha na nGiall,17.0,Ireland,2000.0,GRA-147279,3635.0,35.0,0,Ireland,True,False,False,True
+Balnuaran of Clava Centre,-4.0741,57.473,8,NP,passage,way/41662530,Balnuaran of Clava Central,10.0,United Kingdom,1965.0,AA-21256,3605.0,75.0,0,Scotland,True,True,False,False
+Talatí de Dalt,4.21541,39.89289,7,NP,unk,way/200307714,Talayot de Talatí de Dalt,12.0,Spain,1960.0,KIA-19500,3605.0,30.0,0,Balearic Islands,False,True,False,False
+Balnuaran of Clava North-east,-4.0733,57.4734,7,NP,passage,way/41662528,Balnuaran of Clava NE,11.0,United Kingdom,1955.0,AA-25235,3600.0,50.0,0,Scotland,True,True,True,True
+Karleby 57,13.6377,58.1529,1,NP,passage,node/4298235242,Karleby 60:1,426.0,Sweden,1955.0,OXA-22002,3600.0,30.0,0,"Denmark, Sweden and Norway",True,True,True,True
+Jardines aux Moines,-2.2894,48.0197,1,NP,rows,node/457231920,Le Jardin aux Moines,45.0,France,1930.0,GIF-6484,3580.0,90.0,0,North-west France,False,True,False,False
+Harden Moor near Bingley,-1.8876,53.8443,4,P,circle,node/678580252,Stone Circle,2.0,United Kingdom,1920.0,BM-2576,3570.0,50.0,0,England and Man,False,False,False,False
+Stackpole Warren,-1.406,51.74,1,P,circle,relation/12555859,Devil's Quoits,70.0,United Kingdom,1915.0,CAR-475,3570.0,70.0,0,England and Man,False,False,False,True
+Broomend of Crichie,-2.3677,57.2671,3,NP,circle,way/251170073,Broomend of Crichie Stone Circle / Henge,21.0,United Kingdom,1835.0,SUERC-23675,3525.0,35.0,0,Scotland,False,True,True,True
+Great Carn Cefn Bryn,-4.1801,51.5926,3,P,dolmen,node/2499934264,Arthur's Stone,115.0,United Kingdom,1830.0,BIRM-1179,3510.0,60.0,0,Wales,True,False,False,False
+Goedog,-4.06537,52.8708,1,NP,unk,node/8986769512,Moel Goedog West Ring Cairn 1,114.0,United Kingdom,1820.0,CAR-160,3500.0,70.0,0,Wales,False,True,True,True
+Les Maioles,1.595197,41.66891,3,N,dolmen,node/7234317391,Sepulcre Megalític de les Maioles,255.0,Spain,1815.0,UBAR-560,3495.0,50.0,0,Southern and eastern Spain,True,True,False,False
+Rollright Stones (King Stone),-1.5698,51.9762,3,NP,menhir,node/1609572713,King Stone,26.0,United Kingdom,1810.0,BM-2430,3490.0,70.0,0,England and Man,False,True,False,False
+S'Aigua Dolça,3.295974,39.74301,5,N,chamber,way/348682648,Sepulcre megalític de s’Aigua Dolça,991.0,Spain,1805.0,KIA-15223,3485.0,40.0,0,Balearic Islands,True,True,False,False
+King Stone,-1.56902,51.9754,1,NP,menhir,node/1609572713,King Stone,123.0,United Kingdom,1800.0,BM-2428,3480.0,50.0,0,England and Man,False,True,True,True
+Penmaenmawr,-3.9177,53.2525,2,P,circle,way/1383516911,,98.0,United Kingdom,1795.0,NPL-11,3470.0,145.0,0,Wales,False,False,False,False
+Montple,4.188847,39.89543,6,P,dolmen,node/3607742815,Dolmen de Alcaidús,60.0,Spain,1775.0,OXA-5809,3460.0,65.0,0,Balearic Islands,True,False,False,False
+Dolmen de Aizibita,-1.9122,42.6859,1,KN,dolmen,node/3497727602,Aizibita,339.0,Spain,1775.0,GRN-21297,3460.0,50.0,0,Galicia and northern Spain,True,True,False,False
+Berrybrae,-1.9555,57.6044,1,NP,circle,node/11094347228,Berrybrae Stone Circle,8.0,United Kingdom,1760.0,HAR-1849,3450.0,80.0,0,Scotland,False,True,False,False
+Montplé,4.188847,39.89543,1,P,dolmen,node/3607742815,Dolmen de Alcaidús,60.0,Spain,1735.0,IRPA-1183,3435.0,35.0,0,Balearic Islands,True,False,False,True
+Broomend of Crichie,-2.3697,57.2665,2,NP,circle,way/251170073,Broomend of Crichie Stone Circle / Henge,130.0,United Kingdom,1730.0,OXA-18252,3432.0,30.0,0,Scotland,False,True,True,True
+Brenig,-3.52,53.1023,1,N,circle,node/3073739616,Stone Circle - Brenig 8,964.0,United Kingdom,1720.0,HAR-799,3420.0,80.0,0,Wales,False,True,True,True
+Alderley Edge,-2.21,53.2961,1,P,circle,node/540354546,Druids' Circle,91.0,United Kingdom,1715.0,BETA-115607,3420.0,60.0,0,England and Man,False,False,False,True
+Cambous,3.7333,43.75,1,N,dolmen,node/2652519182,Dolmen de Cambous,601.0,France,1715.0,LY-5603,3420.0,55.0,0,Rest of France,True,True,True,True
+Great Carn,-4.18014,51.5926,1,P,dolmen,node/2499934264,Arthur's Stone,116.0,United Kingdom,1710.0,BIRM-1150,3415.0,70.0,0,Wales,True,False,False,True
+Hill of Tuack,-2.34,57.2292,2,P,circle,way/1243484186,Tuach Hill Stone Circle,31.0,United Kingdom,1695.0,SUERC-56457,3406.0,38.0,0,Scotland,False,False,False,False
+Strichen,-2.10536,57.5807,1,NP,circle,node/1563724045,Strichen Stone Circle,128.0,United Kingdom,1695.0,BM-2316R,3390.0,130.0,0,Scotland,False,True,False,False
+North Farm West Overton,-1.8296,51.412,2,P,unk,way/1125397109,,113.0,United Kingdom,1680.0,BM-2680,3380.0,120.0,0,England and Man,False,False,False,True
+Harden Moor,-1.88599,53.8434,1,P,circle,node/678580252,Stone Circle,144.0,United Kingdom,1675.0,BM-2572,3390.0,50.0,0,England and Man,False,False,False,True
+Cefn Caer Euni site 1,-3.5004,52.9568,1,NP,circle,way/1035849420,Caer Euni Stone Circles,49.0,United Kingdom,1665.0,CAR-601,3380.0,70.0,0,Wales,False,True,True,True
+Alcaidús,4.188164,39.89552,6,NP,dolmen,node/3607742815,Dolmen de Alcaidús,1.0,Spain,1640.0,KIA-13989,3360.0,30.0,0,Balearic Islands,True,True,False,True
+Bajil,-2.072514,38.23234,1,N,dolmen,node/3456886892,Dolmen de Bajil / Bagil,682.0,Spain,1640.0,I-17131,3350.0,100.0,0,Southern and eastern Spain,True,True,False,False
+Rastorf LA 1,10.29173,54.28444,1,NP,dolmen,node/405150959,Großsteingrab Rastorf 1,5.0,Germany,1640.0,GRN-10755,3340.0,170.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+Devil's Quoit,-1.406,51.74,1,NP,circle,relation/12555859,Devil's Quoits,70.0,United Kingdom,1625.0,CAR-100,3345.0,65.0,0,England and Man,False,True,True,True
+Anta dor Tassos,-8.45,37.78333,1,K,dolmen,,,,Portugal,1615.0,SA-199,3320.0,200.0,0,Portugal,True,True,False,False
+Berrybrae,-1.95482,57.6041,1,NP,circle,node/11094347228,Berrybrae Stone Circle,57.0,United Kingdom,1590.0,HAR-1893,3310.0,90.0,0,Scotland,False,True,True,True
+Balbirnie,-3.1544,56.2133,1,NP,circle,node/4764537772,Balbirnie Stone Circle (modern),108.0,United Kingdom,1585.0,GRA-26141,3320.0,40.0,0,Scotland,False,True,False,False
+Callanish Kerb Cairn,-6.745656,58.20111,2,N,circle,way/1013218548,Callanish XIX,685.0,United Kingdom,1580.0,OXA-9865,3310.0,45.0,0,Scotland,False,True,True,True
+Stormy Point Alderley Edge Macclesfield,-2.211,53.2977,4,P,circle,node/540354546,Druids' Circle,148.0,United Kingdom,1580.0,SUERC-17840,3320.0,35.0,1,England and Man,False,False,False,True
+Guidel; site: Cruguel Tuchenn,-3.48861,47.78977,1,P,dolmen,node/8177522716,,93.0,France,1555.0,GIF-235,3270.0,200.0,0,North-west France,True,False,False,False
+Chabola de la Hechicera,-2.5536,42.5675,1,P,dolmen,node/1783552001,Sorginaren Txabola,13.0,Spain,1550.0,BETA-288936,3280.0,40.0,0,Galicia and northern Spain,True,False,False,False
+Edderton Dridgag Cottage,-4.167,57.8317,1,N,unk,node/10874902627,: Edderton I Standing Stone - Clach Biorach - The Sharp Stone,801.0,United Kingdom,1550.0,GU-2099,3280.0,50.0,0,Scotland,False,True,False,False
+Maughanasilly,-9.3826,51.7734,3,N,rows,node/10634665942,Maughanasilly Stone Row,441.0,Ireland,1535.0,GRN-92809281,3265.0,55.0,0,Ireland,False,True,False,False
+Maughanasilly,-9.38566,51.7713,1,NP,rows,node/10634665942,Maughanasilly Stone Row,126.0,Ireland,1535.0,GRN-8281,3265.0,55.0,0,Ireland,False,True,True,True
+Temple Wood Kilmartin,-5.4988,56.1235,12,NP,circle,way/357838017,Temple Wood Stone Circle,9.0,United Kingdom,1495.0,GU-1300,3225.0,105.0,0,Scotland,False,True,False,False
+Anta das Castellanas,-7.85571,37.37979,1,K,dolmen,,,,Portugal,1485.0,OXA-5432,3220.0,65.0,0,Portugal,True,True,False,False
+Poulawack,-9.14863,53.0328,1,N,unk,way/177161779,Poulawack Cairn,251.0,Ireland,1475.0,GRN-12621,3225.0,25.0,0,Ireland,False,True,True,True
+Lough Gur,-8.5304,52.5196,7,N,menhir,node/9306596496,Lough Gur Standing Stone,682.0,Ireland,1465.0,GRN-16821,3200.0,40.0,0,Ireland,False,True,True,True
+Durrington site 67 Amesbury,-1.8263,51.1789,1,P,circle,way/37118074,Stonehenge,54.0,United Kingdom,1465.0,SUERC-32171,3200.0,30.0,0,England and Man,False,False,False,True
+Knowth 2,-6.4914,53.7012,1,NP,passage,way/264536965,Knowth,45.0,Ireland,1445.0,BM-786,3185.0,225.0,0,Ireland,True,True,True,True
+Ślęża,16.71003,50.86454,1,NP,unk,node/11083914438,Grodzisko Ślęża,114.0,Poland,1440.0,UA-42405,3163.0,34.0,0,"Low Countries, north Germany and Poland",False,True,False,False
+Son Ermitá,4.006991,40.04674,1,N,unk,way/1130976691,Necrópolis de So n'Ermità,272.0,Spain,1435.0,UBAR-412,3170.0,70.0,0,Balearic Islands,False,True,False,False
+Hüsby,9.483798,54.49721,2,N,dolmen,node/1231439397,Rechteckdolmen von Hüsby,510.0,Germany,1425.0,KI-221,3160.0,65.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Durrington site 68 Amesbury,-1.8263,51.1789,1,P,circle,way/37118074,Stonehenge,54.0,United Kingdom,1420.0,SUERC-32165,3145.0,30.0,0,England and Man,False,False,False,True
+Ses Roques Llises,4.112602,39.8974,4,P,unk,way/201427672,,5.0,Spain,1410.0,KIA-20204,3135.0,35.0,0,Balearic Islands,False,False,False,False
+Hospitalet,3.262794,39.4838,4,P,tower,way/487540409,,135.0,Spain,1405.0,UBAR-390,3140.0,60.0,0,Balearic Islands,False,False,False,False
+Knowth 15,-6.4917,53.7051,1,N,passage,way/264536965,Knowth,422.0,Ireland,1380.0,BM-1077,3118.0,48.0,0,Ireland,True,True,True,True
+Gunnastorp,11.12671,59.21075,7,P,circle,node/1386062581,,36.0,Norway,1370.0,T-3433,3130.0,180.0,0,"Denmark, Sweden and Norway",False,False,False,False
+Rafal Rub√ɬâ‰ÂÂ,4.189838,39.9074,8,NP,unk,relation/7165121,Navetes de Rafal Rubí,89.0,Spain,1345.0,KIA-16270,3090.0,30.0,0,Balearic Islands,False,True,False,False
+Son Morell,3.874262,40.03645,5,NP,tower,node/4810632134,Naveta of Son Morell,5.0,Spain,1345.0,UA-19723,3090.0,45.0,0,Balearic Islands,False,True,False,False
+St. Valbyvej,12.10822,55.66228,1,P,dolmen,way/26471629,Børnehøj,140.0,Denmark,1265.0,K-5151,3030.0,85.0,0,"Denmark, Sweden and Norway",True,False,False,False
+Torre del Ram,3.809095,40.01212,1,N,tower,node/4810629910,Naveta Torre del Ram 3,159.0,Spain,1265.0,UBAR-426,3020.0,50.0,0,Balearic Islands,False,True,False,False
+Nuraghe Sala e Serru,8.8133,40.2477,1,KP,tower,node/4559578256,Dolmen di Sarbogadas,132.0,Italy,1245.0,Q-3170,3010.0,70.0,0,Sardinia and Corsica,False,True,False,False
+Laughanstown,-6.151,53.2416,12,P,dolmen,node/1180785466,,82.0,Ireland,1225.0,OXA-12889,2991.0,34.0,0,Ireland,True,False,False,False
+Cultoon Islay,-6.468,55.7247,2,P,circle,way/637607123,,18.0,United Kingdom,1225.0,GX-4841,3005.0,130.0,0,Scotland,False,False,False,False
+Lough Gur,-8.5339,52.5163,13,N,menhir,node/9306596496,Lough Gur Standing Stone,396.0,Ireland,1195.0,GRN-19470,2980.0,110.0,0,Ireland,False,True,True,True
+Son Ferrandell-Oleza-YS,2.590572,39.70233,37,N,unk,relation/7199715,"Zona arqueològica de Son Ferrandell, Son Olesa, the Maze, i el santuari de Son Mas",690.0,Spain,1185.0,IRPA-1041,2970.0,55.0,0,Balearic Islands,False,True,True,True
+Ballymeanoch,-5.4857,56.1112,1,NP,rows,relation/5339574,Ballymeanoch Standing Stones,40.0,United Kingdom,1185.0,GRA-28613,2970.0,40.0,0,Scotland,False,True,False,False
+MÔøΩatsÔøΩ 8,-1.4147,43.273,1,P,circle,node/986323968,Mehatseko Lepoa,132.0,France,1170.0,GIF-9573,2960.0,50.0,0,Rest of France,False,False,False,False
+Nuraghe Albucciu,9.4097,41.068,6,KNP,tower,way/460367821,Nuraghe Albucciu,14.0,Italy,1160.0,R-841C,2950.0,60.0,0,Sardinia and Corsica,False,True,False,False
+Stantare,8.8869,41.5568,2,P,menhir,way/985181053,Alignement de menhirs de Pagliajo,55.0,France,1160.0,GIF-1396,2950.0,110.0,0,Sardinia and Corsica,False,False,False,False
+Plas Gogerddan,-4.0213,52.4318,3,P,menhir,node/2325324258,Carreg Llwyd,88.0,United Kingdom,1160.0,CAR-993,2950.0,70.0,0,Wales,False,False,False,True
+Strontoiller,-5.3926,56.4063,1,NP,circle,way/620299455,Strontoiller circle,223.0,United Kingdom,1130.0,SUERC-16641,2930.0,35.0,0,Scotland,False,True,False,False
+Apatesaro 6,-1.1264,43.0472,1,N,circle,node/1109665063,Apatesaro Hego,185.0,France,1115.0,GIF-8664,2920.0,45.0,0,Rest of France,False,True,False,False
+Genna Maria,8.8543,39.6345,1,NP,tower,way/198074375,Nuraghe Genna Maria,32.0,Italy,1115.0,P-2403,2920.0,50.0,0,Sardinia and Corsica,False,True,False,False
+Gasteren,6.663063,53.03599,2,N,dolmen,node/372770982,Hunebed D10 Gasteren,799.0,Netherlands,1100.0,GRA-10877,2910.0,50.0,0,"Low Countries, north Germany and Poland",True,True,False,False
+Ses Paísses,3.354735,39.68912,4,N,unk,relation/7201349,ses Païsses,253.0,Spain,1100.0,GIF-1247,2900.0,110.0,0,Balearic Islands,False,True,False,False
+Dolmen de Bernalta 1,-3.4103,43.1759,1,K,dolmen,,,,Spain,1095.0,UA-4251,2905.0,55.0,0,Galicia and northern Spain,True,True,False,False
+Nuraghe Arribiu,9.2978,39.662,1,KP,tower,way/177034922,Nuraghe Arrubiu,36.0,Italy,1095.0,CSIC-1606,2910.0,27.0,0,Sardinia and Corsica,False,True,False,False
+La Cova,3.896742,39.9409,3,N,tower,node/4810635555,Naveta of La Cova,306.0,Spain,1095.0,UA-19716,2905.0,50.0,0,Balearic Islands,False,True,False,False
+Binipati Nou W Menorca,3.890594,39.99272,6,NP,tower,node/4810636476,Naveta of Binipati,15.0,Spain,1090.0,OXA-5815,2900.0,70.0,0,Balearic Islands,False,True,False,False
+Croftmoraig,-3.9603,56.6018,1,P,circle,way/555224083,Croft Moraig Stone Circle,6.0,United Kingdom,1090.0,SUERC-47157,2901.0,39.0,0,Scotland,False,False,False,False
+La Pierre CouvretiÔøΩre II,-1.1728,47.3686,1,P,dolmen,node/1313709861,Dolmen de la Pierre Couvretière,8.0,France,1070.0,GIF-3763,2880.0,100.0,0,North-west France,True,False,False,False
+Dolmen de la Pera dÔøΩArdÔøΩvol,1.5507,41.8668,1,K,dolmen,,,,Spain,1065.0,UBAR-264,2880.0,60.0,0,Southern and eastern Spain,True,True,False,False
+Aikey Brae,-2.0704,57.514,2,NP,circle,way/769459789,Aikey Brae,9.0,United Kingdom,1040.0,AA-49296,2865.0,50.0,0,Scotland,False,True,False,False
+Balnuaran of Clava South-west,-4.0746,57.4726,5,NP,passage,way/41662532,Balnuaran of Clava SW,1.0,United Kingdom,1030.0,AA-21261,2855.0,70.0,0,Scotland,True,True,False,False
+Cotaina d´en Carreres,4.169974,39.90143,3,NP,tower,node/4810636477,Naveta of Cotaina Carreras,7.0,Spain,1030.0,UBAR-424,2860.0,50.0,0,Balearic Islands,False,True,False,False
+Meur Sanday,-2.4468,59.2971,3,NP,unk,node/5509254823,Meur Burnt Mound (original location),54.0,United Kingdom,1030.0,SUERC-9739,2860.0,35.0,0,Orkney and Shetland,False,True,False,False
+Corrydown Gartley Aberdeen,-2.490401,57.48977,1,NP,circle,way/1195364843,Corrydown,52.0,United Kingdom,1000.0,OXA-6812,2835.0,60.0,0,Scotland,False,True,False,False
+Altar,-9.6443,51.5135,6,NP,cpw,way/1141427128,Altar Wedge Tomb,33.0,Ireland,985.0,GRN-17504,2820.0,70.0,0,Ireland,True,True,True,True
+Binipati Nou,3.890594,39.99272,4,NP,tower,node/4810636476,Naveta of Binipati,15.0,Spain,975.0,UTC-5536,2825.0,30.0,0,Balearic Islands,False,True,True,True
+Old Keig,-2.6706,57.2634,1,NP,circle,node/11100246072,Old Keig stone circle remains,12.0,United Kingdom,975.0,GRA-21696,2820.0,50.0,0,Scotland,False,True,False,False
+Es Tudons,3.891646,40.00309,4,NP,tower,way/113623849,Naveta des Tudons,16.0,Spain,975.0,IRPA-1179,2820.0,40.0,0,Balearic Islands,False,True,False,False
+The Nine Stanes Garrol,-2.4572,57.0113,1,NP,circle,way/882874347,Nine Stanes Stone Circle,10.0,United Kingdom,970.0,GRA-28624,2820.0,35.0,0,Scotland,False,True,False,False
+Temple Wood Kilmartin,-5.4981,56.1234,1,NP,circle,way/357860767,Temple Wood Stone Circle,51.0,United Kingdom,960.0,SRR-530,2807.0,50.0,0,Scotland,False,True,True,True
+Bressay Cruester,-1.1343,60.1625,1,N,unk,node/14024068051,Stane o' Cruester,1000.0,United Kingdom,960.0,AA-52539,2810.0,40.0,0,Orkney and Shetland,False,True,False,False
+Beaghmore,-6.9398,54.7003,4,NP,unk,relation/10789839,Beaghmore,69.0,United Kingdom,955.0,UB-89,2800.0,60.0,0,Ireland,False,True,False,True
+Apatesaro 1,-1.1264,43.0472,1,N,circle,node/1109665063,Apatesaro Hego,185.0,France,950.0,GIF-5728,2780.0,90.0,0,Rest of France,False,True,True,True
+Eext Gemeinde Anlo (1937),6.734068,53.01635,5,N,dolmen,node/262878221,Hunebed D13 Eext,728.0,Netherlands,930.0,GRN-6750,2785.0,35.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+Capocorp Vell,2.826949,39.40017,1,P,tower,node/4822685152,Talaiot de Capocorb d'en Jaquetó,51.0,Spain,920.0,KIA-12697,2775.0,35.0,0,Balearic Islands,False,False,False,False
+Plas Gogerddan,-4.02125,52.4318,1,P,menhir,node/2325324258,Carreg Llwyd,90.0,United Kingdom,920.0,CAR-1073,2770.0,60.0,0,Wales,False,False,False,True
+Binimaimut,4.196049,39.88427,1,N,tower,node/4810635971,Naveta of Binimaimut,639.0,Spain,910.0,UBAR-425,2760.0,60.0,0,Balearic Islands,False,True,False,False
+Drombeg,-9.093604,51.56469,1,N,circle,way/250585422,Drombeg Stone Circle,448.0,Ireland,900.0,OXA-2683,2740.0,80.0,0,Ireland,False,True,False,False
+MÔøΩhatzÔøΩ 5,-1.3414,43.0804,1,P,circle,node/3399686220,Cromlech tumular Mehatze 5,31.0,Spain,900.0,GIF-4470,2730.0,100.0,0,Southern and eastern Spain,False,False,False,False
+Istrehågan,10.174209,59.096776,6,NP,other,way/148252084,Istrehågan steinsetting,6.0,Norway,900.0,T-12740,2746.0,71.0,0,"Denmark, Sweden and Norway",False,True,False,False
+Apatesaro 5,-1.1264,43.0472,1,N,circle,node/1109665063,Apatesaro Hego,185.0,France,890.0,GIF-6988,2740.0,60.0,0,Rest of France,False,True,True,True
+Ensay Manish Strand,-7.0914,57.7678,4,N,menhir,node/13732109727,Ensay Standing Stone,673.0,United Kingdom,885.0,AA-52522,2750.0,35.0,0,Scotland,False,True,False,False
+Drombeg,-9.0877,51.5644,4,NP,circle,way/250585422,Drombeg Stone Circle,45.0,Ireland,885.0,GRN-14719,2740.0,50.0,0,Ireland,False,True,True,True
+Little Quoit Farm St Columb Major Restormel,-4.9216,50.4207,3,N,dolmen,node/3071485102,Devil's Quoit,221.0,United Kingdom,880.0,AA-36505,2740.0,45.0,0,England and Man,True,True,False,False
+Millagate 5,-1.0308,43.0099,1,N,circle,node/1110057940,Cromlech Millagate,151.0,France,880.0,GIF-7559,2730.0,60.0,0,Rest of France,False,True,False,False
+MÔøΩatsÔøΩ 11,-1.4147,43.273,1,P,circle,node/986323968,Mehatseko Lepoa,132.0,France,875.0,GIF-10284,2705.0,75.0,0,Rest of France,False,False,False,True
+Biniac-L'Argentina,4.172592,39.91921,1,NP,tower,node/4810623965,Naveta de Biniac Occidental,5.0,Spain,865.0,IRPA-1182,2720.0,35.0,0,Balearic Islands,False,True,False,False
+Cultoon,-6.46636,55.7251,1,P,circle,way/637607123,,124.0,United Kingdom,865.0,SRR-500,2715.0,40.0,0,Scotland,False,False,False,True
+Chromlech de Mendiluce,-2.2867,42.8397,1,P,circle,node/1823898425,Mendiluze,8.0,Spain,865.0,CSIC-694,2700.0,60.0,0,Galicia and northern Spain,False,False,False,False
+Palaggiu,8.8869,41.5568,2,P,menhir,way/985181053,Alignement de menhirs de Pagliajo,55.0,France,845.0,GIF-477,2680.0,150.0,0,Sardinia and Corsica,False,False,False,True
+Apatesaro 4,-1.1264,43.0472,1,N,circle,node/1109665063,Apatesaro Hego,185.0,France,840.0,GIF-6031,2670.0,90.0,0,Rest of France,False,True,True,True
+Tholos de Palacio III,-6.081435,37.87273,1,K,chamber,,,,Spain,830.0,BETA-165552,2660.0,90.0,0,Southern and eastern Spain,True,True,False,False
+Eext,6.73472,53.0175,1,N,dolmen,node/262878221,Hunebed D13 Eext,856.0,Netherlands,830.0,GRA-10876,2670.0,40.0,0,"Low Countries, north Germany and Poland",True,True,True,True
+Erw-wen,-4.0718,52.8703,3,P,circle,node/2928411279,Stone Circle,19.0,United Kingdom,830.0,CAR-531,2660.0,60.0,0,Wales,False,False,False,False
+Carrowmore 26,-8.514,54.2468,10,NP,circle,way/292693552,Carrowmore 27,54.0,Ireland,805.0,LU-1627,2630.0,55.0,0,Ireland,False,True,False,False
+Zaho 2,-1.473,43.0866,1,NP,circle,node/3473932385,Zaho Hegoalde,43.0,France,805.0,GIF-6343,2640.0,90.0,0,Rest of France,False,True,False,False
+Trepucó,4.264831,39.87355,3,NP,tower,node/492869182,Taula de Trepucó,50.0,Spain,790.0,IRPA-1132,2610.0,40.0,0,Balearic Islands,False,True,False,False
+Apatesaro 1 bis,-1.1264,43.0472,1,N,circle,node/1109665063,Apatesaro Hego,185.0,France,700.0,GIF-5729,2590.0,90.0,0,Rest of France,False,True,True,True
+Torre dels Moros de Llanera,1.475778,41.89867,1,NP,dolmen,node/3588437205,Dolmen de Llanera,2.0,Spain,650.0,MC-1113,2550.0,90.0,0,Southern and eastern Spain,True,True,False,False
+Ballybeen Dundonald,-5.7942,54.5865,1,P,unk,node/11007780841,The Long Stone,88.0,United Kingdom,645.0,UB-2461,2539.0,70.0,0,Ireland,False,False,False,False
+Outeiro de Gregos 3,-8.0415,41.1864,1,NP,unk,node/3994226732,Mamoa de Outeiro de Gregos 3,7.0,Portugal,630.0,KN-2767,2510.0,55.0,0,Portugal,False,True,False,False
+Rath of the Synods Tara,-6.6116,53.5802,16,P,passage,way/1136248491,Dumha na nGiall,89.0,Ireland,625.0,UBA-8530,2474.0,33.0,0,Ireland,True,False,False,True
+Mullamast,-6.8504,53.0063,1,P,menhir,node/12349425084,The Long Stone,76.0,Ireland,585.0,SUERC-24971,2455.0,30.0,0,Ireland,False,False,False,False
+Strichen,-2.1062,57.581,2,NP,circle,node/1563724045,Strichen Stone Circle,99.0,United Kingdom,580.0,BM-2315R,2460.0,130.0,0,Scotland,False,True,True,True
+Annaghmare,-6.6173,54.1014,3,P,cpw,way/1124655659,The Black Castle Chambered Grave,37.0,United Kingdom,,,,,0,Ireland,True,False,False,True
+Avebury,-1.8544,51.4286,4,NP,circle,relation/8497688,Avebury Stone Circle,177.0,United Kingdom,,,,,0,England and Man,False,True,True,True
+Avebury southern car park,-1.8496,51.4276,1,N,circle,relation/8497688,Avebury Stone Circle,253.0,United Kingdom,,,,,0,England and Man,False,True,True,True
+Baliscate Mull,-6.0766,56.6121,1,P,rows,node/2131097079,,13.0,United Kingdom,,,,,0,Scotland,False,False,False,False
+Ballynagallagh Lough Gur,-8.525,52.5035,6,N,unk,way/1145086685,Lough Gur Tomb,729.0,Ireland,,,,,0,Ireland,False,True,False,False
+Carrowmore,-8.5192,54.2508,2,NP,dolmen,way/439081916,Carrowmore 2,60.0,Ireland,,,,,0,Ireland,True,True,True,True
+Carrowmore (Donegal),-7.1888,55.2562,2,P,menhir,node/9666885297,,32.0,Ireland,,,,,0,Ireland,False,False,False,False
+Carrowmore 2,-8.5195,54.2512,1,NP,dolmen,way/439081916,Carrowmore 2,21.0,Ireland,,,,,0,Ireland,True,True,True,True
+Carrowmore 51,-8.5193,54.2482,1,NP,dolmen,node/4367050052,Carrowmore 48,92.0,Ireland,,,,,0,Ireland,True,True,False,False
+Cat Stane,-3.3641,55.9543,5,NP,menhir,node/3964920098,Cat Stane,64.0,United Kingdom,,,,,0,Scotland,False,True,False,False
+Crvena Stijena,18.481,42.778,5,NP,unk,node/10879170567,Crvena stijena,116.0,Montenegro,,,,,5,South-east Europe and the Black Sea,False,True,False,False
+Dromatouk,-9.5226,51.8826,1,N,circle,node/1359631584,Dromatouk stone circle,221.0,Ireland,,,,,0,Ireland,False,True,False,False
+Drombeg,-9.087,51.5646,1,NP,circle,way/250585422,Drombeg Stone Circle,8.0,Ireland,,,,,0,Ireland,False,True,True,True
+Dunnideer,-2.646,57.3424,2,N,circle,way/1058265355,Dunnideer Stone Circle,474.0,United Kingdom,,,,,0,Scotland,False,True,False,False
+E18 lok.74,10.161098,59.1376,1,P,other,way/148259125,,141.0,Norway,,,,,0,"Denmark, Sweden and Norway",False,False,False,False
+Eathorne Menhir,-5.5577,50.1394,1,K,menhir,,,,United Kingdom,,,,,0,England and Man,False,True,False,False
+Eext-Hooidijk,6.7333,53.0167,1,N,dolmen,node/262878221,Hunebed D13 Eext,728.0,Netherlands,,,,,1,"Low Countries, north Germany and Poland",True,True,True,True
+Emmen-Angelslo,6.9309,52.7805,1,N,dolmen,way/735174884,Hunebed D47 Emmen - Angelslo,466.0,Netherlands,,,,,1,"Low Countries, north Germany and Poland",True,True,True,True
+Fourknocks Ridge,-6.3196,53.5971,1,N,passage,way/286946697,Fourknocks Megalithic Passage Tomb,465.0,Ireland,,,,,0,Ireland,True,True,True,True
+Gislinge lammefjord,8.8016,55.1609,1,P,unk,node/2290034731,,78.0,Denmark,,,,,1,"Denmark, Sweden and Norway",False,False,False,True
+Huly Hill Newbridge,-3.4049,55.9385,2,P,unk,node/350563635,,32.0,United Kingdom,,,,,0,Scotland,False,False,False,False
+Hunn,11.066667,59.216667,1,N,circle,node/8374670062,Hunn (Steinringfeltet),571.0,Norway,,,,,0,"Denmark, Sweden and Norway",False,True,False,False
+Igue du Gral,1.6885,44.5049,7,P,dolmen,node/8430853050,Dolmen du Cloup del Prioun,64.0,France,,,,,7,Rest of France,True,False,False,False
+Ihrovytsia,1.6885,44.5049,1,P,dolmen,node/8430853050,Dolmen du Cloup del Prioun,64.0,France,,,,,1,Rest of France,True,False,False,True
+Isle of Ensay,-7.0886,57.7698,3,N,menhir,node/13732109727,Ensay Standing Stone,556.0,United Kingdom,,,,,0,Scotland,False,True,True,True
+Karleby 71,13.6472,58.1635,1,N,passage,node/4298251284,Karleby 76:1,573.0,Sweden,,,,,0,"Denmark, Sweden and Norway",True,True,False,False
+Kilmalkedar Church,-10.3362,52.1848,1,P,menhir,node/9110402649,Alphabet Stone,3.0,Ireland,,,,,0,Ireland,False,False,False,False
+Kiltullagh Hill,-8.7126,53.7137,2,P,menhir,node/11753802428,,72.0,Ireland,,,,,0,Ireland,False,False,False,False
+Knowth,-6.4934,53.7023,1,NP,passage,way/264536965,Knowth,140.0,Ireland,,,,,0,Ireland,True,True,True,True
+Knowth 1,-6.4914,53.7012,1,NP,passage,way/264536965,Knowth,45.0,Ireland,,,,,0,Ireland,True,True,True,True
+Knowth site M,-6.4917,53.7017,1,NP,passage,way/264536965,Knowth,47.0,Ireland,,,,,0,Ireland,True,True,True,True
+LES FIEUX,1.69,44.88,10,N,dolmen,node/6923405555,Dolmen des Fieux 2,254.0,France,,,,,10,Rest of France,True,True,False,False
+Loubressac,0.68,46.42,1,NP,dolmen,node/2084335081,Dolmen de Loubressac,111.0,France,,,,,1,Rest of France,True,True,False,False
+Loughcrew Cairn H,-7.1116,53.7445,2,P,passage,way/61742994,Cairn V,4.0,Ireland,,,,,0,Ireland,True,False,False,False
+Lundin Links,-2.9479,56.2114,15,N,circle,node/7419219252,Standing Stones of Lundin,849.0,United Kingdom,,,,,0,Scotland,False,True,False,False
+Ness Swainbost Lewis,-6.2849,58.4896,1,N,menhir,node/12877141010,Swainbost Standing Stone,336.0,United Kingdom,,,,,0,Scotland,False,True,False,False
+Newgrange,-6.4756,53.6948,2,NP,passage,way/25696157,Newgrange,38.0,Ireland,,,,,0,Ireland,True,True,True,True
+Newgrange,-6.4755,53.6947,1,NP,passage,way/25696157,Newgrange,44.0,Ireland,,,,,0,Ireland,True,True,True,True
+Parc le Breos Chambered Cairn,-4.11104,51.58891,1,KNP,chamber,node/812166158,Parc le Breos,129.0,United Kingdom,,,,,1,Wales,True,True,True,True
+Parc le Breos Cwm,-4.1118,51.5878,1,NP,chamber,node/812166158,Parc le Breos,90.0,United Kingdom,,,,,0,Wales,True,True,True,True
+Pedra dos Mouros,-9.2667,38.7731,1,NP,dolmen,way/462416296,Anta da Pedra dos Mouros,6.0,Portugal,,,,,0,Portugal,True,True,False,False
+Pumsaint,-3.9609,52.0471,4,N,menhir,node/8811584249,Careg Pumsaint,740.0,United Kingdom,,,,,0,Wales,False,True,False,False
+QuÔøΩlarn,-4.2516,47.8139,1,P,dolmen,node/9611035351,Dolmen de Quélarn,2.0,France,,,,,1,North-west France,True,False,False,False
+Rath na Rí Tara,-6.6122,53.5781,9,P,passage,way/1136248491,Dumha na nGiall,149.0,Ireland,,,,,0,Ireland,True,False,False,True
+Schortewitz,12.0167,51.65,1,N,chamber,node/994437789,Großsteingrab Schortewitz,758.0,Germany,,,,,0,Central Europe,True,True,False,False
+Son Ferrandell-Oleza/olivar,2.590572,39.70233,1,N,unk,relation/7199715,"Zona arqueològica de Son Ferrandell, Son Olesa, the Maze, i el santuari de Son Mas",690.0,Spain,,,,,0,Balearic Islands,False,True,True,True
+St Kevin's Church Glendalough,-6.3276,53.01,1,P,unk,node/10089197976,The Deer Stone,61.0,Ireland,,,,,0,Ireland,False,False,False,False
+SÔøΩo Gens 1,-7.6755,39.4458,1,NP,dolmen,node/3994147226,Anta de São Gens 4,5.0,Portugal,,,,,0,Portugal,True,True,False,False
+Tamnyrankin,-6.7,54.9332,1,NP,passage,node/4651579274,Tamnyrankin Court Tomb,4.0,United Kingdom,,,,,0,Ireland,True,True,False,False
+Valdemuriel 2,-3.7867,42.7123,1,NP,dolmen,node/3298032862,Dolmen de Valdemuriel 1,5.0,Spain,,,,,1,Galicia and northern Spain,True,True,True,True
