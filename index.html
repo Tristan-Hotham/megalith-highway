@@ -487,6 +487,6 @@ resp(document.getElementById("zones"), (W, nar) => {
   const ly = H - 10; let x = 0; R.zones.zone_names.forEach((z, j) => { el("rect", { x, y: ly - 9, width: 10, height: 10, fill: `var(${ZC[j]})` }, svg); const t = lbl(svg, x + 14, ly, nar ? ["Atlantic", "Mediterranean", "Inland"][j] : z, "lab s"); x += t.getComputedTextLength() + 34; });
 });
 </script>
-<script src="https://tristan-hotham.github.io/assets/site-nav.js" defer></script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>
